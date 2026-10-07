@@ -144,3 +144,19 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
   max-width:100%!important;
   max-height:100%!important;
 }
+
+/* QR preview — fill the complete framed square without shrinking the code */
+.qrTableCard .qrVisual.realQr{
+  width:132px!important;height:132px!important;min-width:132px!important;flex:0 0 132px!important;
+  padding:7px!important;overflow:hidden!important;box-sizing:border-box!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+}
+.qrTableCard .qrVisual.realQr svg{
+  width:118px!important;height:118px!important;min-width:118px!important;
+  max-width:none!important;max-height:none!important;display:block!important;flex:none!important;
+}
+/* Desktop QR guest route uses the same custom Mesa pointer */
+@media (pointer:fine){
+  .qrGuestPage,.qrGuestPage *{cursor:none!important}
+  .qrGuestPage .cursorDot{display:block!important}
+}
