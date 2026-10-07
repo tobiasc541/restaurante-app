@@ -160,3 +160,19 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
   .qrGuestPage,.qrGuestPage *{cursor:none!important}
   .qrGuestPage .cursorDot{display:block!important}
 }
+
+/* QR guest consistency across mobile + desktop */
+.qrGuestActions button,
+.qrGuestActions button b,
+.qrGuestActions button:link,
+.qrGuestActions button:visited,
+.qrGuestActions button:active{
+  color:#171311!important;
+  -webkit-text-fill-color:#171311!important;
+  text-decoration:none!important;
+}
+.qrGuestActions button{-webkit-appearance:none;appearance:none;-webkit-tap-highlight-color:transparent}
+@media (pointer:fine){
+  .qrGuestPage,.qrGuestPage *{cursor:none!important}
+  .qrCursor{display:block!important;position:fixed!important;left:-3px!important;top:-3px!important;width:6px!important;height:6px!important;background:#f0a51b!important;border-radius:50%!important;pointer-events:none!important;z-index:2147483647!important}
+}
