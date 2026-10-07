@@ -123,3 +123,24 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .qrGuestDetail{min-height:480px}.qrGuestDetail h2{font-size:38px;letter-spacing:-1.8px;margin:26px 0 12px}.qrGuestFoot{display:block;text-align:center;margin-top:24px;color:#8b8179}
 .realQr{display:grid!important;place-items:center;padding:5px!important}.realQr svg{width:100%!important;height:auto!important}
 @media(max-width:620px){.qrGuestPage{padding:12px}.qrGuestShell{border-radius:24px;padding:20px;box-shadow:5px 5px 0 #f0a51b}.qrGuestActions{grid-template-columns:1fr 1fr}.qrGuestActions button{min-height:115px}.qrWaiter em{display:none}}
+
+/* Keep the live QR visually contained inside its preview frame */
+.qrTableCard .qrVisual.realQr{
+  width:132px!important;
+  height:132px!important;
+  min-width:132px!important;
+  flex:0 0 132px!important;
+  box-sizing:border-box!important;
+  padding:9px!important;
+  overflow:hidden!important;
+  border:1.5px solid #171311!important;
+  border-radius:10px!important;
+  background:#fff!important;
+}
+.qrTableCard .qrVisual.realQr svg{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:100%!important;
+  max-height:100%!important;
+}
