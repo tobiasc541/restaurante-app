@@ -203,3 +203,13 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .billingLayout>section>h3{margin:22px 0 18px}
 @media(max-width:650px){.liveModule .liveStats{grid-template-columns:1fr}.billingLayout>section{padding-top:18px}}
 @media(prefers-reduced-motion:reduce){.ownerContent,.waiterViewAnimated{animation:none}}
+
+/* v11: fixed centered table details, unaffected by animated page containers */
+.ownerContent{animation:none!important;transform:none!important;overflow:visible!important}
+.ownerContent .tableDrawer{position:fixed!important;inset:74px 0 0 188px!important;z-index:900!important;display:flex!important;flex-direction:column!important;align-items:center!important;padding:45px 28px!important;overflow-y:auto!important;background:#f6efe7ed!important;backdrop-filter:blur(12px);animation:none!important}
+.ownerContent .tableDrawer:before{position:fixed!important;inset:105px max(24px,calc((100vw - 1160px)/2)) 30px max(212px,calc((100vw - 1160px)/2))!important;border-radius:28px!important;z-index:-1!important}
+.ownerContent .tableDrawer>*{width:min(890px,100%);flex-shrink:0}
+.ownerContent .tableDrawer .drawerClose{position:fixed!important;top:120px!important;right:max(48px,calc((100vw - 1090px)/2))!important;width:44px!important;z-index:2!important}
+.ownerContent .tableDrawer h2{font-size:clamp(40px,6vw,76px)!important;margin:4px 0 18px!important}
+.ownerContent .tableDrawer .attentionBox,.ownerContent .tableDrawer .drawerStats,.ownerContent .tableDrawer .qrTableCard{width:min(890px,100%)!important;max-width:none!important}
+@media(max-width:700px){.ownerContent .tableDrawer{inset:74px 0 0 0!important;padding:45px 20px!important}.ownerContent .tableDrawer:before{inset:90px 12px 12px 12px!important}.ownerContent .tableDrawer .drawerClose{top:104px!important;right:24px!important}}
