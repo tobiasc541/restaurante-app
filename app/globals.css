@@ -251,3 +251,14 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .waiterApp .mesaCleaningCard>div{flex-wrap:wrap}
 .waiterApp .waiterTableModal{z-index:10}
 @media(max-width:550px){.waiterApp{padding:18px 12px 32px}.waiterApp .waiterPhone{width:100%;border-radius:25px;box-shadow:5px 5px 0 #20b95b}.waiterApp .waiterPhone>.waiterNav,.waiterApp .waiterPhone>.waiterNav.five{grid-template-columns:repeat(3,minmax(0,1fr))!important;row-gap:8px;border-radius:0 0 25px 25px}.waiterApp .waiterNav button{min-height:44px}.waiterApp .waiterPhone>.endShift{margin-bottom:16px}}
+
+.mesaAdminNotifications{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 14px;margin-bottom:16px;background:#fff;border:1px solid #ded7d0;border-radius:13px;color:#171311}
+.mesaAdminNotifications span{font-size:12px;font-weight:850}
+.mesaAdminNotifications select,.mesaAdminNotifications button{min-height:35px;border:1px solid #d2c8bd;border-radius:9px;background:#fff;padding:6px 11px;font-size:12px;font-weight:750}
+.mesaAdminNotifications button{background:#171311;color:#fff;cursor:pointer}
+.mesaAdminAlert{position:fixed;right:18px;top:100px;z-index:400;display:flex;flex-direction:column;gap:8px;max-width:min(420px,calc(100vw - 36px));padding:18px 20px;background:#fff;border:2px solid #0b9c3c;border-radius:15px;box-shadow:0 14px 35px #0003;color:#171311}
+.mesaAdminAlert b{font-size:13px}.mesaAdminAlert span{font-size:13px}.mesaAdminAlert button{align-self:flex-end;background:#171311;color:#fff;border:0;border-radius:8px;padding:8px 14px;cursor:pointer}
+.mesaOrdersTabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}.mesaOrdersTabs button{padding:10px 14px;border:1px solid #171311;background:transparent;color:#171311;border-radius:12px;font-weight:850;cursor:pointer}.mesaOrdersTabs button.selected{background:#171311;color:#fff}
+.mesaOrderHistory{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.mesaOrderHistory article{display:flex;flex-direction:column;gap:9px;padding:18px;background:#fff;border:1px solid #d9d0c7;border-radius:14px}.mesaOrderHistory span{font-size:12px}.mesaOrderHistory small{color:#6d645d}
+.mesaAliasHistory{margin-top:24px;padding:22px;background:#fff;border:1px solid #d7cfc6;border-radius:18px}.mesaAliasHistory h3{font-size:22px;margin:0 0 6px}.mesaAliasHistory>p{color:#6b635e;font-size:12px}.mesaAliasHistory article{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;border-top:1px solid #e8e1d9}.mesaAliasHistory article>div{display:flex;flex-direction:column;gap:5px}.mesaAliasHistory small{color:#6b635e}.mesaAliasHistory strong{font-size:18px}
+@media(max-width:650px){.mesaAdminNotifications{align-items:stretch;flex-direction:column}.mesaAliasHistory{padding:16px}}
