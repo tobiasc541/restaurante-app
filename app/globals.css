@@ -702,3 +702,26 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .mesaLandingOwnerApp .mesaDemoOptionRow button{white-space:nowrap}
 .modalBg{z-index:20000!important}
 @media(max-width:700px){.mesaLandingOwnerApp .mesaDemoOrderColumns{grid-template-columns:1fr}.mesaLandingOwnerApp .mesaDemoOptionRow{flex-wrap:wrap}}
+
+
+/* Consistent live-dashboard styling in the interactive landing demo */
+.mesaLandingOwnerApp .mesaDemoKitchenFixed .kitchenPage{border-radius:22px;overflow:hidden;min-height:460px;box-sizing:border-box;background:#080808;padding:24px}
+.mesaLandingOwnerApp .mesaDemoKitchenFixed .kitchenGrid{min-height:240px;align-content:start}
+.mesaLandingOwnerApp .mesaDemoStaffCards article{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px;padding:18px;border-radius:15px}
+.mesaLandingOwnerApp .mesaDemoStaffCards article h3{grid-column:1/-1;margin:0}
+.mesaLandingOwnerApp .mesaDemoStaffCards article small{min-width:0}
+.mesaLandingOwnerApp .mesaDemoStaffCards article button.dark{border-radius:12px!important;padding:11px 15px!important;width:auto!important;min-width:130px;justify-self:end;white-space:nowrap}
+.mesaLandingOwnerApp .mesaDemoProducts article{padding:16px;border-radius:16px;display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:start}
+.mesaLandingOwnerApp .mesaDemoProducts article>div{grid-column:1/-1;min-height:108px}
+.mesaLandingOwnerApp .mesaDemoProducts article>button{border-radius:9px!important;min-height:34px;margin:0!important;padding:8px 10px!important}
+.mesaLandingOwnerApp .mesaDemoProducts article>button:first-of-type{grid-column:1/-1;background:#000;color:white}
+.mesaLandingOwnerApp .mesaDemoProducts article>button:last-of-type{color:#ba1523;border-color:#e35560}
+.mesaLandingOwnerApp .mesaDemoProducts article p{margin:8px 0 0;font-size:12px}
+.mesaLandingOwnerApp .mesaDemoProducts article h3{margin:5px 0}
+.mesaTipSettlement{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;padding-top:12px;border-top:1px solid #e9e1d8}
+.mesaTipSettlement b{font-size:12px}
+.mesaTipSettlement button{background:#000;color:#fff;border:1px solid #000;border-radius:10px;padding:9px 14px;font-weight:750}
+.mesaTipSettlement button:disabled{opacity:.45;cursor:default}
+.mesaLandingOwnerApp .floorObject input{max-width:145px;min-width:80px;background:#fff;border:1px solid #d5c6b6;border-radius:8px;padding:7px}
+.mesaLandingOwnerApp .addFloorObject,.mesaLandingOwnerApp .addSalon{cursor:pointer}
+@media(max-width:700px){.mesaLandingOwnerApp .mesaDemoKitchenFixed .kitchenPage{min-height:420px;padding:15px}.mesaLandingOwnerApp .mesaDemoStaffCards article{grid-template-columns:1fr}.mesaLandingOwnerApp .mesaDemoStaffCards article button.dark{justify-self:start}}
