@@ -277,3 +277,16 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .mesaWaiterAlert b{font-size:15px;font-weight:950;color:#fff}.mesaWaiterAlert strong{font-size:14px;font-weight:900;color:#ffda4b;line-height:1.4}
 .mesaWaiterAlert button{padding:12px;border-radius:10px;border:1px solid #fff;background:#fff;color:#111;font-weight:950;cursor:pointer}
 @media(max-width:700px){.tableDrawer{padding:75px 7vw 28px}.tableDrawer::before{inset:25px 3vw}.tableDrawer .mesaDrawerTitle h2{font-size:38px}.mesaAdminAlert{top:90px}}
+
+/* Table drawer: actual card container, not an offset pseudo-element */
+.tableDrawer{position:fixed;inset:74px 0 0 235px;z-index:210;overflow-y:auto;overflow-x:hidden;background:#f6efe7f5;padding:28px clamp(20px,5vw,95px) 40px;box-sizing:border-box;isolation:auto}
+.tableDrawer::before,.tableDrawer:before{display:none!important;content:none!important}
+.tableDrawerSheet{position:relative;min-height:calc(100vh - 150px);padding:32px;box-sizing:border-box;border:1.5px solid #171311;border-radius:26px;background:#fff;box-shadow:8px 8px 0 #f0a51b}
+.tableDrawer .drawerClose{position:absolute;right:26px;top:26px;z-index:3}
+.tableDrawer .mesaDrawerTitle{margin:0 55px 24px 0;max-width:100%}
+.tableDrawer .mesaDrawerTitle h2{font-size:clamp(34px,4vw,62px);margin:0;line-height:1.08}
+.realAside{min-width:0;box-sizing:border-box;overflow-x:hidden;padding:30px 15px!important}
+.realAside button{box-sizing:border-box;min-width:0;max-width:100%;width:100%;white-space:normal;overflow-wrap:anywhere}
+.realAside button svg{flex-shrink:0}
+.mesaAdminAlert strong,.mesaWaiterAlert strong{font-weight:950!important;user-select:text}
+@media(max-width:800px){.tableDrawer{inset:74px 0 0 0;padding:18px}.tableDrawerSheet{padding:24px 18px;min-height:calc(100vh - 130px)}.tableDrawer .drawerClose{right:16px;top:16px}.tableDrawer .mesaDrawerTitle{margin-right:48px}}
