@@ -422,3 +422,10 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 @keyframes mesaPromoShine{0%,100%{box-shadow:0 0 0 0 #f5b83a00}45%{box-shadow:0 0 0 7px #f5b83a25}}
 @media(max-width:760px){.mesaPricingEpic{padding-top:65px!important;padding-bottom:65px!important}.mesaPricePromo{margin:14px 10px 10px 0}.mesaPromoRibbon{font-size:9px;letter-spacing:0}.mesaPriceOffer>b{font-size:44px!important}}
 @media(prefers-reduced-motion:reduce){.mesaPromoRibbon{animation:none}.mesaPricePromo{transition:none}}
+
+/* Shiny Text reutilizable: reflejo continuo sobre tipografía */
+.mesaShinyText{display:inline;background-size:220% 100%;background-position:150% center;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:mesaShinySweep linear infinite;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+@keyframes mesaShinySweep{0%{background-position:150% center}100%{background-position:-50% center}}
+.mesaWelcomeCard .mesaShinyText{filter:drop-shadow(0 3px 12px #0006)}
+.mesaPriceOffer b{font-variant-numeric:tabular-nums;white-space:nowrap}
+@media(prefers-reduced-motion:reduce){.mesaShinyText{animation:none!important;background-position:50% center}}
