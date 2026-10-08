@@ -224,3 +224,5 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 
 /* Auth/bootstrap loading state: prevent setup wizard flash on refresh */
 .mesaBootLoading{min-height:calc(100vh - 100px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px;padding:30px;text-align:center;background:#f7efe6;color:#171717}.mesaBootLoading h2{margin:0;font-size:25px;letter-spacing:-.04em}.mesaBootLoading p{margin:0;color:#756d64;font-size:14px}.mesaBootSpinner{width:34px;height:34px;border:3px solid #e5d9cd;border-top-color:#101010;border-radius:50%;animation:mesaBootSpin .75s linear infinite}@keyframes mesaBootSpin{to{transform:rotate(360deg)}}.mesaBootLoading button{margin-top:8px;padding:12px 22px;background:#111;color:#fff;border:0;border-radius:10px;font-weight:700;cursor:pointer}
+
+.mesaEnableAlerts{display:block;margin-top:9px;padding:9px 11px;border:1px solid #161616;border-radius:10px;background:#fff;color:#141414;font-size:11px;font-weight:800;cursor:pointer;white-space:normal;text-align:center}.mesaEnableAlerts:hover{background:#effcf1}
