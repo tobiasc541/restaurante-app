@@ -1,0 +1,16 @@
+{
+  "name": "MESA — Tu restaurante, conectado",
+  "short_name": "MESA",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f6f0e8",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
