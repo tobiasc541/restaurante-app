@@ -637,3 +637,19 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .mesaLandingOwnerBody .metric{min-width:0;overflow-wrap:anywhere}
 .mesaLandingOwnerBody .activityRow{min-width:0}
 @media(max-width:780px){.mesaLandingOwnerApp{display:flex;flex-direction:column;max-width:100%;min-height:0;border-radius:18px}.mesaLandingOwnerApp>.realAside{display:none}.mesaLandingOwnerTabs{display:flex;gap:6px;overflow-x:auto;padding:12px;scrollbar-width:thin}.mesaLandingOwnerTabs button{flex:0 0 auto;border:1px solid #ddd;background:#fff;border-radius:10px;padding:9px 12px;font-weight:700}.mesaLandingOwnerTabs button.selected{background:#111;color:#fff}.mesaLandingOwnerBody .dashMain{padding:16px}.mesaLandingOwnerBody .metrics{grid-template-columns:minmax(0,1fr)}}
+
+.mesaLandingOwnerApp .mesaOwnerSample{padding:22px;min-width:0;box-sizing:border-box;width:100%}
+.mesaLandingOwnerApp .mesaOwnerSample .ownerHead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.mesaLandingOwnerApp .mesaOwnerSample .ownerMetrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0}
+.mesaLandingOwnerApp .mesaOwnerSample .ownerMetrics article{min-width:0}
+.mesaLandingOwnerApp .mesaOwnerSample .ownerPanel{margin-top:16px;min-width:0}
+.mesaDemoOwnerRow{display:flex;gap:10px;align-items:center;padding:14px 10px;border-bottom:1px solid #eee;min-width:0;flex-wrap:wrap}
+.mesaDemoOwnerRow>div{flex:1 1 180px;min-width:0;display:flex;flex-direction:column;gap:4px}
+.mesaDemoOwnerRow>div span{font-size:12px;color:#666;overflow-wrap:anywhere}
+.mesaDemoOwnerRow select,.mesaDemoOwnerRow button{border:1px solid #ddd;border-radius:9px;background:#fff;padding:8px;font-size:12px}
+.mesaDemoOwnerRow button{cursor:pointer}
+.mesaDemoSalonGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;padding:14px}
+.mesaDemoSalonTable{background:#111;color:#fff;border:1px solid #333;border-radius:14px;padding:18px 12px;display:flex;flex-direction:column;gap:7px;text-align:left;cursor:pointer}
+.mesaDemoSalonTable small{color:#ccc}.mesaDemoSalonTable strong{color:#ffac00;font-size:12px}
+@media(max-width:1000px){.mesaLandingOwnerApp .mesaOwnerSample .ownerMetrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.mesaLandingOwnerApp .mesaOwnerSample{padding:12px}.mesaLandingOwnerApp .mesaOwnerSample .ownerMetrics{grid-template-columns:repeat(2,minmax(0,1fr))}.mesaDemoOwnerRow{align-items:stretch}.mesaDemoOwnerRow>div{flex-basis:100%}}
