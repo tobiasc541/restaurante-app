@@ -378,3 +378,9 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .mesaWaiterProducts b{min-width:15px;text-align:center}
 .mesaWaiterSend{background:#b9f8cb;color:#06130b;border:0;border-radius:9px;width:100%;padding:12px;margin-top:12px;font-weight:800;cursor:pointer}
 .mesaWaiterSend:disabled{opacity:.45;cursor:not-allowed}
+
+/* MESA — controles de turno */
+.staffCards .mesaShiftButton{appearance:none;border:1px solid #111;background:#111;color:#fff;border-radius:999px;padding:11px 20px;font:inherit;font-weight:700;cursor:pointer;transition:background .18s,transform .18s;min-height:42px;width:fit-content;max-width:100%;}
+.staffCards .mesaShiftButton:hover{background:#303030;transform:translateY(-1px)}
+.staffCards .mesaShiftButton:focus-visible{outline:3px solid #e5a900;outline-offset:3px}
+.staffCards .mesaShiftButton:disabled{opacity:.5;cursor:not-allowed;transform:none}
