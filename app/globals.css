@@ -653,3 +653,32 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .mesaDemoSalonTable small{color:#ccc}.mesaDemoSalonTable strong{color:#ffac00;font-size:12px}
 @media(max-width:1000px){.mesaLandingOwnerApp .mesaOwnerSample .ownerMetrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.mesaLandingOwnerApp .mesaOwnerSample{padding:12px}.mesaLandingOwnerApp .mesaOwnerSample .ownerMetrics{grid-template-columns:repeat(2,minmax(0,1fr))}.mesaDemoOwnerRow{align-items:stretch}.mesaDemoOwnerRow>div{flex-basis:100%}}
+
+
+/* Landing owner demo: contain overlays, respect content height, preserve native app controls */
+.mesaLandingOwnerApp .mesaOwnerSample .ownerHead{margin-bottom:12px}
+.mesaLandingOwnerApp .mesaOwnerSample .ownerHead h2{margin:0}
+.mesaLandingOwnerApp .mesaDemoKitchen .kitchenPage{min-height:0!important;height:auto!important;max-height:none!important;padding-bottom:24px}
+.mesaLandingOwnerApp .mesaDemoKitchen{min-height:0!important;height:auto!important}
+.mesaLandingOwnerApp .mesaDemoKitchen .kitchenGrid{align-content:start}
+.mesaDemoModalOverlay{position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;overflow-y:auto}
+.mesaDemoTableModal{position:relative;background:#fff;color:#111;border:1px solid #111;border-radius:20px;box-shadow:5px 6px 0 #f3a300;width:min(620px,100%);max-height:calc(100dvh - 40px);overflow-y:auto;padding:24px;box-sizing:border-box}
+.mesaDemoTableModal h2{font-size:clamp(28px,5vw,44px);margin:8px 0 18px}
+.mesaDemoModalClose{position:absolute;top:15px;right:15px;border:0;border-radius:50%;background:#000;color:#fff;width:32px;height:32px;font-size:23px;cursor:pointer}
+.mesaDemoTableInfo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.mesaDemoTableInfo>div{border:1px solid #ddd;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.mesaDemoTableInfo small{font-size:9px;letter-spacing:1px;color:#777}
+.mesaDemoQR{display:flex;align-items:center;gap:16px;margin:18px 0;padding:16px;border:1px solid #ddd;border-radius:14px;min-width:0}
+.mesaDemoQR img{width:140px;height:140px;flex:none}
+.mesaDemoQR>div{min-width:0;overflow-wrap:anywhere}
+.mesaDemoQR code{display:block;font-size:11px;overflow-wrap:anywhere;margin:8px 0}
+.mesaDemoQR button,.mesaDemoStatus button{border:1px solid #111;border-radius:10px;background:white;padding:9px 12px;font-weight:700;cursor:pointer}
+.mesaDemoStatus>div{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.mesaDemoToast{position:fixed;z-index:10001;right:24px;bottom:24px;max-width:min(400px,calc(100vw - 32px));background:#111;color:white;border:1px solid #333;border-left:5px solid #15bd50;border-radius:12px;box-shadow:0 12px 30px #0003;padding:13px 16px;display:flex;align-items:center;gap:18px;font-weight:700}
+.mesaDemoToast button{border:0;background:transparent;color:white;font-size:20px;cursor:pointer}
+.mesaDemoReport .reportToolbar>button[disabled]{opacity:.35;cursor:not-allowed}
+.mesaDemoTransfers{background:white;border:1px solid #ddd;border-radius:14px;padding:16px;margin-top:16px}
+.mesaDemoTransfers .paymentLine{padding:12px 0;border-bottom:1px solid #eee}
+.mesaLandingOwnerApp .menuManager .productGrid button{border:1px solid #111;background:white;border-radius:10px;padding:8px 12px;font-weight:700;cursor:pointer;margin-top:8px}
+.mesaLandingOwnerApp .menuManager .productGrid article{min-width:0}
+@media(max-width:600px){.mesaDemoTableInfo{grid-template-columns:1fr}.mesaDemoQR{flex-direction:column;align-items:flex-start}.mesaDemoTableModal{padding:18px}.mesaDemoQR img{width:120px;height:120px}}
