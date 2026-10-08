@@ -543,3 +543,21 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .mesaNotificationBoard .waiterAlert.mesaRequestCard.mesaNotificationCard b{font-size:12px;color:#171311}
 .mesaNotificationBoard .waiterAlert.mesaRequestCard.mesaNotificationCard span{font-size:11px;color:#625a54}
 .mesaNotificationBoard .mesaDemoSoundButton{font-size:10px!important;padding:7px 9px!important;background:#d9ffe6!important;color:#121212!important;border:1px solid #9be6b3!important;border-radius:9px!important;cursor:pointer;align-self:flex-start}
+
+/* Landing: reuse the exact live waiter popup without clipping or stacking. */
+.mesaNotificationBoard.mesaRealAlertDemo{background:#080808!important;color:#fff!important;border-color:#161616!important;box-sizing:border-box;display:flex;flex-direction:column;min-height:310px;overflow:visible!important}
+.mesaRealAlertDemo .mesaNotificationBoardHead{flex:0 0 auto}
+.mesaRealAlertDemo .mesaNotificationBoardHead b{color:#fff}
+.mesaRealAlertDemo .mesaNotificationBoardHead small{color:#aaa}
+.mesaRealAlertStage{display:flex;align-items:center;justify-content:center;flex:1;min-height:175px;width:100%;min-width:0;padding:12px 0;box-sizing:border-box;overflow:visible}
+.mesaRealAlertArrival{width:100%;max-width:440px;animation:mesaRealAlertDrop .45s cubic-bezier(.18,.85,.24,1) both}
+.mesaRealAlertArrival .mesaWaiterAlert{margin:0!important;width:100%;box-sizing:border-box;background:#240b0b!important;border:2px solid #ff4949!important;border-radius:14px!important;padding:15px!important;display:flex!important;flex-direction:column!important;gap:10px!important;box-shadow:0 0 18px #e33a3a55!important}
+.mesaRealAlertArrival .mesaWaiterAlert b{color:#fff!important;font-size:15px!important;font-weight:950!important}
+.mesaRealAlertArrival .mesaWaiterAlert strong{color:#ffda4b!important;font-size:14px!important;font-weight:900!important}
+.mesaRealAlertArrival .mesaWaiterAlert button{background:#fff!important;color:#111!important;border:1px solid #fff!important;border-radius:10px!important;padding:12px!important;font-weight:950!important;width:100%!important;cursor:pointer}
+.mesaRealAlertDemo .mesaNotificationBoardBottom{position:static!important;flex:0 0 auto;text-align:center;color:#aaa;background:transparent!important;padding:10px 0 0!important}
+.mesaRealAlertFinished{text-align:center;display:flex;flex-direction:column;gap:14px;align-items:center}
+.mesaRealAlertFinished button{border:1px solid #fff;background:#fff;color:#111;padding:12px 20px;border-radius:10px;font-weight:800;cursor:pointer}
+@keyframes mesaRealAlertDrop{from{opacity:0;transform:translateY(-40px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:700px){.mesaNotificationBoard.mesaRealAlertDemo{min-height:300px;padding:15px!important}.mesaRealAlertArrival{max-width:100%}}
+@media(prefers-reduced-motion:reduce){.mesaRealAlertArrival{animation:none}}
