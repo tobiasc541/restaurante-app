@@ -573,3 +573,34 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .mesaWaiterDemo.waiterPhone .salonExperience .floorPlan{min-width:0;width:100%;box-sizing:border-box}
 .mesaWaiterDemo.waiterPhone .mesaWaiterDemoNav{overflow-x:auto;max-width:100%;scrollbar-width:thin}
 @media(max-width:700px){.mesaWaiterDemo.waiterPhone .salonExperience .salonMetrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Landing responsive contract: no content-driven shrinking of interactive previews. */
+.mesaLandingFineDivider{height:44px;display:flex;align-items:center;justify-content:center;background:#fff;overflow:hidden}
+.mesaLandingFineDivider span{display:block;width:min(88%,1100px);height:1px;background:linear-gradient(90deg,transparent,#e8ded1 17%,#d9cbb8 50%,#e8ded1 83%,transparent)}
+.hero{grid-template-columns:minmax(0,1fr) minmax(350px,.85fr)!important;align-items:center!important;min-width:0}
+.hero>*{min-width:0}
+.hero .phoneWrap:has(.mesaWaiterDemo){width:min(100%,440px)!important;min-width:350px!important;max-width:440px!important;display:block!important;justify-self:center;flex-shrink:0}
+.hero .phoneWrap .mesaWaiterDemo.waiterPhone{display:flex!important;flex-direction:column!important;width:100%!important;min-width:0!important;max-width:none!important;min-height:580px!important;height:640px!important;max-height:640px!important;padding:0!important;border-radius:25px!important;overflow:hidden!important;box-sizing:border-box!important}
+.hero .mesaWaiterDemo .waiterStatus{padding:13px 16px 0!important;gap:8px!important;flex-shrink:0}
+.hero .mesaWaiterDemo .waiterStatus h2{font-size:23px!important;line-height:1.12!important;overflow-wrap:normal!important;word-break:normal!important}
+.hero .mesaWaiterDemo .waiterStatus>span{flex-shrink:0!important;white-space:nowrap!important}
+.hero .mesaWaiterDemo .waiterSummary{padding:0 14px!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;flex-shrink:0}
+.hero .mesaWaiterDemo .waiterSummary article{min-width:0!important;padding:10px!important}
+.hero .mesaWaiterDemo .mesaWaiterDemoNotice{flex-shrink:0}
+.hero .mesaWaiterDemo .mesaWaiterDemoContent{flex:1 1 auto!important;min-height:0!important;width:100%!important;box-sizing:border-box!important;padding:12px!important;overflow-y:auto!important;overflow-x:hidden!important}
+.hero .mesaWaiterDemo .salonExperience{min-width:0!important;max-width:100%!important}
+.hero .mesaWaiterDemo .salonHero{padding:0!important;min-width:0!important}
+.hero .mesaWaiterDemo .salonHero h2{font-size:20px!important;line-height:1.17!important;word-break:normal!important;overflow-wrap:break-word!important}
+.hero .mesaWaiterDemo .salonHero p{font-size:11px!important;line-height:1.4!important}
+.hero .mesaWaiterDemo .salonMetrics{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:6px!important}
+.hero .mesaWaiterDemo .salonMetrics article{min-width:0!important;padding:9px!important}
+.hero .mesaWaiterDemo .floorPlan{min-width:0!important;max-width:100%!important;overflow:hidden!important}
+.hero .mesaWaiterDemo .mesaWaiterDemoNav{flex-shrink:0!important;min-width:0!important;overflow-x:auto!important;white-space:nowrap!important}
+.hero .mesaWaiterDemo .mesaWaiterDemoFoot{flex-shrink:0!important}
+.mesaNotificationBoard,.mesaLandingQrPhone,.dashboard{min-width:0;max-width:100%;box-sizing:border-box}
+.mesaPixelReveal:not(.mesaPixelsStarted) .mesaPixelGrid span{opacity:1!important;animation:none!important}
+.mesaPixelReveal.mesaPixelsStarted .mesaPixelGrid span{animation:mesaPixelDissolve .5s steps(4,end) both!important}
+.mesaPixelGrid{z-index:2!important}
+.mesaPixelGrid span{background:#151515!important}
+@media(max-width:900px){.hero{grid-template-columns:minmax(0,1fr)!important;gap:30px!important}.hero .phoneWrap:has(.mesaWaiterDemo){min-width:0!important;width:min(100%,440px)!important}.hero .phoneWrap .mesaWaiterDemo.waiterPhone{height:600px!important;max-height:600px!important}.mesaNotificationBoard{width:100%!important}}
+@media(max-width:480px){.hero .phoneWrap:has(.mesaWaiterDemo){width:min(100%,370px)!important}.hero .mesaWaiterDemo .waiterStatus h2{font-size:21px!important}.hero .mesaWaiterDemo .salonHero h2{font-size:18px!important}.hero .mesaWaiterDemo .floorPlan{min-height:360px!important}.mesaLandingFineDivider{height:26px}}
