@@ -806,3 +806,27 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .mesaImpulsaSection .mesaImpulsaBenefits span{font-size:12px;color:#d3cdc5;line-height:1.55}
 .mesaImpulsaSection .mesaImpulsaInner>.mesaImpulsaIntro{max-width:760px;margin-bottom:8px!important}
 @media(max-width:720px){.mesaImpulsaSection .mesaImpulsaBenefits{grid-template-columns:1fr;gap:8px;margin:12px auto 18px}.mesaImpulsaSection .mesaImpulsaBenefits>div{padding:13px 15px}.mesaImpulsaSection .mesaImpulsaBenefits span{font-size:12px}}
+
+/* Landing: visual fidelity of the waiter panel and readable salon map */
+.hero .mesaHeroDevice .mesaWaiterDemo{display:flex!important;flex-direction:column!important;min-width:0!important;overflow:hidden!important;border-radius:22px!important}
+.hero .mesaHeroDevice .mesaWaiterDemoContent{padding:14px 12px!important;overflow:auto!important;min-height:0!important;flex:1 1 auto!important;overscroll-behavior:contain}
+.hero .mesaHeroDevice .mesaWaiterDemoNav{display:grid!important;grid-template-columns:repeat(7,minmax(0,1fr))!important;gap:2px!important;overflow:visible!important;padding:7px 4px!important}
+.hero .mesaHeroDevice .mesaWaiterDemoNav button{min-width:0!important;max-width:100%!important;padding:7px 1px!important;display:flex!important;flex-direction:column!important;align-items:center!important;gap:4px!important}
+.hero .mesaHeroDevice .mesaWaiterDemoNav button span{font-size:8px!important;line-height:1.1!important;white-space:nowrap!important}
+.hero .mesaHeroDevice .mesaWaiterDemoNav svg{width:16px!important;height:16px!important;flex-shrink:0!important}
+.hero .mesaHeroDevice .salonExperience.compact{width:100%!important;max-width:100%!important;margin:0!important;overflow:hidden!important}
+.hero .mesaHeroDevice .salonExperience.compact .salonHero{margin-bottom:10px!important}
+.hero .mesaHeroDevice .salonExperience.compact .salonMetrics{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.hero .mesaHeroDevice .salonExperience.compact .floorPlan.newPlan{width:100%!important;max-width:100%!important;min-width:0!important;height:310px!important;overflow:hidden!important;padding:0!important;position:relative!important}
+.hero .mesaHeroDevice .salonExperience.compact .floorTableV2{width:60px!important;max-width:60px!important;min-width:0!important}
+.hero .mesaHeroDevice .salonExperience.compact .tableShape{height:42px!important;min-width:0!important}
+.hero .mesaHeroDevice .salonExperience.compact .salonBottom{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.hero .mesaHeroDevice .salonExperience.compact .salonSwitcher{max-width:100%!important;overflow-x:auto!important}
+.mesaDiscover .center{max-width:800px;margin-left:auto;margin-right:auto}
+.mesaDiscoverMembership{font-size:13px;line-height:1.65;color:#645d55;max-width:700px;margin:14px auto 20px}
+.mesaDiscoverPlaces{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:16px!important}
+.mesaDiscoverPlaces .place{min-width:0!important;overflow:hidden!important;text-align:left}
+.mesaDiscoverPlaces .art{height:180px!important;min-height:180px!important;background-color:#eee!important}
+.mesaDiscoverPlaces .art svg{display:none}
+.mesaDiscoverDisclaimer{display:block;text-align:center;margin-top:14px;color:#786e65;font-size:11px}
+@media(max-width:720px){.mesaDiscoverPlaces{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}.mesaDiscoverPlaces .art{height:120px!important;min-height:120px!important}.mesaDiscoverMembership{font-size:12px}}
