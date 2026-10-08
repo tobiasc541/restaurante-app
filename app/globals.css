@@ -682,3 +682,23 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .mesaLandingOwnerApp .menuManager .productGrid button{border:1px solid #111;background:white;border-radius:10px;padding:8px 12px;font-weight:700;cursor:pointer;margin-top:8px}
 .mesaLandingOwnerApp .menuManager .productGrid article{min-width:0}
 @media(max-width:600px){.mesaDemoTableInfo{grid-template-columns:1fr}.mesaDemoQR{flex-direction:column;align-items:flex-start}.mesaDemoTableModal{padding:18px}.mesaDemoQR img{width:120px;height:120px}}
+
+
+/* Landing demonstration uses the same visual language as the live owner dashboard. */
+.mesaLandingOwnerApp .mesaOwnerSample>.ownerHead:has(>div:empty){display:none}
+.mesaLandingOwnerApp .mesaDemoOrderColumns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
+.mesaLandingOwnerApp .mesaDemoOrderColumn{background:#ebe4da;border-radius:16px;padding:12px;min-height:110px}
+.mesaLandingOwnerApp .mesaDemoOrderColumn h3{font-size:15px;margin:0 0 12px}
+.mesaLandingOwnerApp .mesaDemoOrderColumn p{font-size:13px}
+.mesaLandingOwnerApp .mesaDemoOrderColumn .ownerPanel{background:white;border-radius:12px;padding:12px;margin:8px 0}
+.mesaLandingOwnerApp .mesaDemoOrderColumn .ownerPanel .dark{margin-top:8px;border-radius:10px;padding:9px 12px}
+.mesaLandingOwnerApp .menuManager .productGrid article{display:flex;flex-direction:column;gap:8px}
+.mesaLandingOwnerApp .menuManager .productGrid article .mesaDemoProductActions{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.mesaLandingOwnerApp .menuManager .productGrid article .mesaDemoProductActions button{margin:0}
+.mesaLandingOwnerApp .menuManager .productGrid article .mesaDemoProductActions .dark{background:#000;color:#fff}
+.mesaLandingOwnerApp .menuManager .productGrid article .mesaDemoProductActions .danger{color:#ba1220;border-color:#e35a5a}
+.mesaLandingOwnerApp .mesaDemoOptionRow{display:flex;gap:6px;margin-top:10px;align-items:center}
+.mesaLandingOwnerApp .mesaDemoOptionRow input{min-width:0;flex:1}
+.mesaLandingOwnerApp .mesaDemoOptionRow button{white-space:nowrap}
+.modalBg{z-index:20000!important}
+@media(max-width:700px){.mesaLandingOwnerApp .mesaDemoOrderColumns{grid-template-columns:1fr}.mesaLandingOwnerApp .mesaDemoOptionRow{flex-wrap:wrap}}
