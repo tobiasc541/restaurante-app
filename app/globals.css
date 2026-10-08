@@ -787,3 +787,14 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 @keyframes mesaImpulsaGoldWave{0%,15%{background-position:100% 0}65%,100%{background-position:0% 0}}
 @media(max-width:700px){.mesaImpulsaSection .mesaFeaturedCarouselWrap .mesaCircularCarousel.mesaCarouselCompact{height:290px!important;min-height:290px;max-height:290px}.mesaImpulsaSection .mesaCarouselCompact .circular-carousel__stage{inset:0 0 42px}.mesaImpulsaSection .mesaFeaturedCarouselHint{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.mesaImpulsaSection .mesaImpulsaShimmer>span{animation:none;background:#fff;-webkit-text-fill-color:initial}}
+
+/* Editorial cleanup: one message, one gallery, one action */
+.mesaImpulsaSection .mesaImpulsaInner{display:flex;flex-direction:column;align-items:center;text-align:center}
+.mesaImpulsaSection .mesaImpulsaInner>.tag{margin-bottom:14px}
+.mesaImpulsaSection .mesaImpulsaInner>.mesaImpulsaShimmer{margin:0 auto 12px!important;max-width:920px}
+.mesaImpulsaSection .mesaImpulsaInner>.mesaImpulsaIntro{max-width:660px;margin:0 auto 20px!important;font-size:clamp(14px,1.25vw,17px);line-height:1.6}
+.mesaImpulsaSection .mesaFeaturedCarouselWrap{margin-top:0;margin-bottom:4px}
+.mesaImpulsaSection .mesaFeaturedCarouselWrap .mesaCircularCarousel.mesaCarouselCompact{height:320px!important;min-height:320px;max-height:320px}
+.mesaImpulsaSection .mesaImpulsaDemoNote{display:block;color:#a9a19a;font-size:11px;margin-top:16px}
+.mesaImpulsaSection .mesaFeaturedCarouselHint{font-size:12px;color:#bcb3a8;margin:2px auto 20px!important}
+@media(max-width:700px){.mesaImpulsaSection .mesaFeaturedCarouselWrap .mesaCircularCarousel.mesaCarouselCompact{height:285px!important;min-height:285px;max-height:285px}.mesaImpulsaSection .mesaImpulsaInner>.mesaImpulsaIntro{padding-inline:8px}}
