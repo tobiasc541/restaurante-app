@@ -1,4 +1,4 @@
 import "./globals.css";
 import type { Metadata } from "next";
 export const metadata:Metadata={title:"Mesa — Tu restaurante, conectado",description:"Mesas, mozos, cuenta en vivo, propinas y reseñas verificadas."};
-export default function Layout({children}:{children:React.ReactNode}){return <html lang="es"><head><link rel="manifest" href="/manifest.webmanifest"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-title" content="MESA"/></head><body>{children}</body></html>}
+export default function Layout({children}:{children:React.ReactNode}){return <html lang="es"><head><link rel="manifest" href="/manifest.webmanifest"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-title" content="MESA"/></head><body>{children}<div className="mesaIchthysWatermark" aria-hidden="true"><svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 40C46 1 99 1 137 40C99 79 46 79 8 40ZM137 40L155 22M137 40L155 58" stroke="currentColor" strokeWidth="4.2" strokeLinecap="round" strokeLinejoin="round"/></svg><span className="mesaIchthysGlow"/></div></body></html>}
