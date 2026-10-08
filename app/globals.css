@@ -798,3 +798,11 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .mesaImpulsaSection .mesaImpulsaDemoNote{display:block;color:#a9a19a;font-size:11px;margin-top:16px}
 .mesaImpulsaSection .mesaFeaturedCarouselHint{font-size:12px;color:#bcb3a8;margin:2px auto 20px!important}
 @media(max-width:700px){.mesaImpulsaSection .mesaFeaturedCarouselWrap .mesaCircularCarousel.mesaCarouselCompact{height:285px!important;min-height:285px;max-height:285px}.mesaImpulsaSection .mesaImpulsaInner>.mesaImpulsaIntro{padding-inline:8px}}
+
+/* MESA Impulsa: concise editorial benefits without crowding the gallery */
+.mesaImpulsaSection .mesaImpulsaBenefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;width:min(100%,1030px);margin:12px auto 20px;text-align:left}
+.mesaImpulsaSection .mesaImpulsaBenefits>div{display:flex;flex-direction:column;gap:8px;padding:18px 19px;background:#141310;border:1px solid #343027;border-radius:15px}
+.mesaImpulsaSection .mesaImpulsaBenefits strong{font-size:14px;color:#ffcb69;line-height:1.35}
+.mesaImpulsaSection .mesaImpulsaBenefits span{font-size:12px;color:#d3cdc5;line-height:1.55}
+.mesaImpulsaSection .mesaImpulsaInner>.mesaImpulsaIntro{max-width:760px;margin-bottom:8px!important}
+@media(max-width:720px){.mesaImpulsaSection .mesaImpulsaBenefits{grid-template-columns:1fr;gap:8px;margin:12px auto 18px}.mesaImpulsaSection .mesaImpulsaBenefits>div{padding:13px 15px}.mesaImpulsaSection .mesaImpulsaBenefits span{font-size:12px}}
