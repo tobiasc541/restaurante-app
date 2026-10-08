@@ -54,6 +54,8 @@ function LandingOwnerSection({tab}:any){
 
  useEffect(()=>{try{const v=localStorage.getItem("mesa-landing-owner-v1");if(v){const parsed=JSON.parse(v);if(parsed&&typeof parsed==="object")setRecords({...DEMO_SEEDS,...parsed})}}catch{}setReady(true)},[]);
  useEffect(()=>{if(ready)try{localStorage.setItem("mesa-landing-owner-v1",JSON.stringify(records))}catch{}},[records,ready]);
+ useEffect(()=>{try{const saved=localStorage.getItem("mesa-landing-owner-modules-v2");if(saved){const d=JSON.parse(saved);if(Array.isArray(d.orders))setDemoOrders(d.orders);if(Array.isArray(d.products))setDemoProducts(d.products);if(Array.isArray(d.aliases))setDemoAliases(d.aliases);if(Array.isArray(d.staff))setDemoStaffState(d.staff);if(d.layout&&typeof d.layout==="object")setDemoLayout(d.layout)}}catch{}},[]);
+ useEffect(()=>{if(!ready)return;try{localStorage.setItem("mesa-landing-owner-modules-v2",JSON.stringify({orders:demoOrders,products:demoProducts,aliases:demoAliases,staff:demoStaffState,layout:demoLayout}))}catch{}},[ready,demoOrders,demoProducts,demoAliases,demoStaffState,demoLayout]);
  const items=records[tab]||[];
  const save=()=>{if(!name.trim())return;setRecords(p=>({...p,[tab]:editing!==null?items.map(x=>x.id===editing?{...x,name:name.trim(),detail:detail.trim()}:x):[...items,{id:Date.now(),name:name.trim(),detail:detail.trim(),status:"Activo"}]}));setDialog(false);setEditing(null);setName("");setDetail("")};
  const change=(id:number,status:string)=>setRecords(p=>({...p,[tab]:items.map(x=>x.id===id?{...x,status}:x)}));
