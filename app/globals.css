@@ -366,3 +366,15 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .mesaInviteCode small{width:100%;color:#5d6854}
 .mesaClaimPanel{max-width:600px;margin:36px auto;display:flex;flex-direction:column;align-items:stretch;gap:12px;padding:26px}
 .mesaClaimPanel input{width:100%;box-sizing:border-box}
+
+
+.mesaWaiterOrderEntry{padding:14px;border:1px solid #353535;border-radius:14px;background:#151515;color:white;margin-bottom:18px}
+.mesaWaiterOrderEntry h3{margin:0 0 12px;font-size:15px}
+.mesaWaiterOrderEntry select{width:100%;padding:10px;border-radius:8px;background:white;color:black;border:0}
+.mesaWaiterProducts{max-height:260px;overflow-y:auto;margin-top:12px;display:grid;gap:8px}
+.mesaWaiterProducts>div{display:flex;align-items:center;gap:8px;background:#262626;padding:9px;border-radius:8px}
+.mesaWaiterProducts span{flex:1;min-width:0;font-size:12px}
+.mesaWaiterProducts button{border-radius:7px;border:1px solid #555;background:#fff;color:#111;min-width:30px;height:30px;cursor:pointer}
+.mesaWaiterProducts b{min-width:15px;text-align:center}
+.mesaWaiterSend{background:#b9f8cb;color:#06130b;border:0;border-radius:9px;width:100%;padding:12px;margin-top:12px;font-weight:800;cursor:pointer}
+.mesaWaiterSend:disabled{opacity:.45;cursor:not-allowed}
