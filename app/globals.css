@@ -725,3 +725,17 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .mesaLandingOwnerApp .floorObject input{max-width:145px;min-width:80px;background:#fff;border:1px solid #d5c6b6;border-radius:8px;padding:7px}
 .mesaLandingOwnerApp .addFloorObject,.mesaLandingOwnerApp .addSalon{cursor:pointer}
 @media(max-width:700px){.mesaLandingOwnerApp .mesaDemoKitchenFixed .kitchenPage{min-height:420px;padding:15px}.mesaLandingOwnerApp .mesaDemoStaffCards article{grid-template-columns:1fr}.mesaLandingOwnerApp .mesaDemoStaffCards article button.dark{justify-self:start}}
+
+
+/* Demo waiter: same icon-based, evenly distributed mobile tab sizing */
+.mesaWaiterDemo .mesaWaiterDemoNav.waiterNav{display:grid!important;grid-template-columns:repeat(7,minmax(0,1fr))!important;gap:2px!important;align-items:stretch!important;padding:10px 10px 12px!important;width:100%!important;box-sizing:border-box!important;overflow:visible!important;background:#0b0a09}
+.mesaWaiterDemo .mesaWaiterDemoNav.waiterNav button{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:5px!important;min-width:0!important;width:100%!important;min-height:54px!important;border-radius:11px!important;padding:6px 2px!important;font-size:10px!important;line-height:1.1!important;white-space:normal!important}
+.mesaWaiterDemo .mesaWaiterDemoNav.waiterNav button svg{width:18px!important;height:18px!important;flex:none}
+.mesaWaiterDemo .mesaWaiterDemoNav.waiterNav button span{font-size:10px!important;white-space:nowrap!important}
+.mesaLandingRoleSwitcher{display:flex;width:max-content;max-width:100%;gap:4px;margin:0 auto 18px;padding:5px;border:1.5px solid #161311;border-radius:40px;background:#fff}
+.mesaLandingRoleSwitcher button{border:0;background:transparent;color:#161311;border-radius:30px;padding:11px 28px;font-size:14px;font-weight:800;cursor:pointer}
+.mesaLandingRoleSwitcher button.active{background:#0b0a09;color:#fff}
+.mesaLandingOwnerApp.mesaLandingBillingMode{display:block!important;padding:20px!important;min-height:490px}
+.mesaLandingOwnerApp.mesaLandingBillingMode .mesaLandingDemoBilling{width:100%;max-width:100%;min-height:440px}
+.mesaLandingOwnerApp.mesaLandingBillingMode .billingLayout{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+@media(max-width:700px){.mesaLandingOwnerApp.mesaLandingBillingMode .billingLayout{grid-template-columns:1fr}.mesaLandingRoleSwitcher button{padding:10px 19px}}
