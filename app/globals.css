@@ -443,3 +443,19 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 @keyframes mesaLandingIconPulse{0%,100%{transform:scale(1);box-shadow:0 0 18px #ffc43a44}50%{transform:scale(1.06);box-shadow:0 0 34px #ffc43aaa}}
 @media(max-width:760px){.mesaLandingQrPhone{margin:0 auto}.mesaLandingBilling{padding:12px}}
 @media(prefers-reduced-motion:reduce){.mesaLandingWelcomeIcon,.mesaLandingGuestWelcome{animation:none}}
+
+/* Correcciones de recorte de títulos con degradado */
+.heroText,.mesaPricingEpic>div:first-child{min-width:0;overflow:visible!important}
+.heroText h1,.mesaPricingEpic h2{overflow:visible!important;max-width:100%;padding-right:.14em;padding-bottom:.13em;margin-bottom:.1em;line-height:1.12!important;overflow-wrap:normal;word-break:normal}
+.heroText h1 .mesaShinyText,.mesaPricingEpic h2 .mesaShinyText{display:inline!important;-webkit-box-decoration-break:clone;box-decoration-break:clone;padding-right:.045em;padding-bottom:.055em}
+.hero{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)}
+.mesaPricingEpic{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+@media(max-width:900px){.heroText h1{font-size:clamp(42px,7vw,76px)!important}.mesaPricingEpic h2{font-size:clamp(34px,5vw,60px)!important}}
+@media(max-width:650px){.heroText h1{font-size:clamp(36px,10vw,56px)!important}.mesaPricingEpic h2{font-size:clamp(31px,8vw,45px)!important}}
+/* Ichthys discreto: brillo exclusivamente sobre el contorno del pez */
+.mesaIchthysWatermark{width:clamp(34px,3.8vw,51px)!important;height:32px!important;right:clamp(10px,1.5vw,20px)!important;bottom:calc(12px + env(safe-area-inset-bottom,0px))!important;opacity:.65!important;filter:none!important;color:#bb8b35!important}
+.mesaIchthysWatermark svg{filter:drop-shadow(0 0 1px #e9ad43)!important;animation:mesaIchthysOutline 5.5s ease-in-out infinite!important}
+.mesaIchthysGlow,.mesaIchthysWatermark:before,.mesaIchthysWatermark:after{display:none!important;animation:none!important}
+@keyframes mesaIchthysOutline{0%,100%{opacity:.5;filter:drop-shadow(0 0 1px #c6953d)}45%{opacity:1;filter:drop-shadow(0 0 4px #f9cb72) drop-shadow(0 0 2px #ffd685)}}
+@media(max-width:700px){.mesaIchthysWatermark{width:33px!important;height:25px!important;right:9px!important;bottom:calc(9px + env(safe-area-inset-bottom,0px))!important;opacity:.5!important}}
+@media(prefers-reduced-motion:reduce){.mesaIchthysWatermark svg{animation:none!important}}
