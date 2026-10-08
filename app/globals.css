@@ -262,3 +262,18 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .mesaOrderHistory{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.mesaOrderHistory article{display:flex;flex-direction:column;gap:9px;padding:18px;background:#fff;border:1px solid #d9d0c7;border-radius:14px}.mesaOrderHistory span{font-size:12px}.mesaOrderHistory small{color:#6d645d}
 .mesaAliasHistory{margin-top:24px;padding:22px;background:#fff;border:1px solid #d7cfc6;border-radius:18px}.mesaAliasHistory h3{font-size:22px;margin:0 0 6px}.mesaAliasHistory>p{color:#6b635e;font-size:12px}.mesaAliasHistory article{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;border-top:1px solid #e8e1d9}.mesaAliasHistory article>div{display:flex;flex-direction:column;gap:5px}.mesaAliasHistory small{color:#6b635e}.mesaAliasHistory strong{font-size:18px}
 @media(max-width:650px){.mesaAdminNotifications{align-items:stretch;flex-direction:column}.mesaAliasHistory{padding:16px}}
+
+/* Drawer title stays inside the bordered white sheet */
+.tableDrawer{padding-top:calc(4vh + 28px);isolation:isolate}
+.tableDrawer::before{z-index:-1}
+.tableDrawer .mesaDrawerTitle{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:5px;margin:0 0 20px;max-width:calc(100% - 62px)}
+.tableDrawer .mesaDrawerTitle .tag{font-size:11px;font-weight:900;letter-spacing:.12em;color:#c47d00}
+.tableDrawer .mesaDrawerTitle h2{font-size:clamp(32px,5vw,58px);line-height:1.05;margin:0;overflow-wrap:anywhere}
+.tableDrawer .drawerClose{z-index:2}
+.mesaAdminAlert{font-weight:850;gap:12px;background:#111;color:#fff;border:2px solid #13b94e;box-shadow:0 15px 45px #0005;min-width:min(380px,calc(100vw - 36px))}
+.mesaAdminAlert b{font-size:16px;font-weight:950}.mesaAdminAlert strong{font-size:14px;font-weight:900;color:#ffd65a;line-height:1.45}
+.mesaAdminAlert button{border:1px solid #fff;background:#111;font-weight:900}
+.mesaWaiterAlert{display:flex;flex-direction:column;gap:10px;padding:15px;margin-bottom:14px;border:2px solid #ff4949;border-radius:14px;background:#240b0b;box-shadow:0 0 18px #e33a3a55}
+.mesaWaiterAlert b{font-size:15px;font-weight:950;color:#fff}.mesaWaiterAlert strong{font-size:14px;font-weight:900;color:#ffda4b;line-height:1.4}
+.mesaWaiterAlert button{padding:12px;border-radius:10px;border:1px solid #fff;background:#fff;color:#111;font-weight:950;cursor:pointer}
+@media(max-width:700px){.tableDrawer{padding:75px 7vw 28px}.tableDrawer::before{inset:25px 3vw}.tableDrawer .mesaDrawerTitle h2{font-size:38px}.mesaAdminAlert{top:90px}}
