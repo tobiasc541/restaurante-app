@@ -290,3 +290,12 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .realAside button svg{flex-shrink:0}
 .mesaAdminAlert strong,.mesaWaiterAlert strong{font-weight:950!important;user-select:text}
 @media(max-width:800px){.tableDrawer{inset:74px 0 0 0;padding:18px}.tableDrawerSheet{padding:24px 18px;min-height:calc(100vh - 130px)}.tableDrawer .drawerClose{right:16px;top:16px}.tableDrawer .mesaDrawerTitle{margin-right:48px}}
+
+/* Keep the owner navigation visible while the table details are open */
+.ownerApp{grid-template-columns:235px minmax(0,1fr)}
+.realAside{position:relative;z-index:215;align-self:stretch;width:235px;max-width:235px;overflow:visible!important;padding:30px 20px!important}
+.realAside button{display:flex;align-items:center;width:100%!important;max-width:100%!important;box-sizing:border-box!important;margin-left:0!important;margin-right:0!important}
+.tableDrawer{left:235px!important}
+.tableDrawerSheet{max-width:100%;overflow:hidden}
+.tableDrawer .tableDrawerSheet>.drawerClose{position:absolute!important;top:22px!important;right:22px!important;left:auto!important;transform:none!important;z-index:5!important}
+@media(max-width:800px){.ownerApp{grid-template-columns:minmax(0,1fr)}.realAside{display:none!important}.tableDrawer{left:0!important}.tableDrawer .tableDrawerSheet>.drawerClose{top:16px!important;right:16px!important}}
