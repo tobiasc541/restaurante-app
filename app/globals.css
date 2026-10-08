@@ -384,3 +384,7 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .staffCards .mesaShiftButton:hover{background:#303030;transform:translateY(-1px)}
 .staffCards .mesaShiftButton:focus-visible{outline:3px solid #e5a900;outline-offset:3px}
 .staffCards .mesaShiftButton:disabled{opacity:.5;cursor:not-allowed;transform:none}
+
+/* El detalle de mesa ocupa solo el área de contenido: no invade ni recorta el menú lateral. */
+@media(min-width:801px){.ownerContent .tableDrawer.mesaDrawerOverlay{position:fixed!important;top:92px!important;right:0!important;bottom:0!important;left:188px!important;inset:92px 0 0 188px!important;width:auto!important;max-width:calc(100vw - 188px)!important;box-sizing:border-box!important;overflow-y:auto!important;z-index:90!important}.ownerApp .realAside{position:relative!important;z-index:100!important;overflow:visible!important}}
+@media(max-width:800px){.ownerContent .tableDrawer.mesaDrawerOverlay{left:0!important;right:0!important;inset:92px 0 0 0!important;width:100%!important;box-sizing:border-box!important;padding:18px 12px!important}}
