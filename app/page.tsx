@@ -26,10 +26,13 @@ export default function Home(){
  const [waiterNotifications,setWaiterNotifications]=useState(false);const waiterSeen=useRef<Set<string>|null>(null);const waiterAudio=useRef<AudioContext|null>(null);const [waiterOrderTable,setWaiterOrderTable]=useState(""),[waiterCart,setWaiterCart]=useState<Record<string,number>>({}),[waiterOrderBusy,setWaiterOrderBusy]=useState(false);const [orderHistoryOpen,setOrderHistoryOpen]=useState(false);const [aliasHistoryOpen,setAliasHistoryOpen]=useState(false);const [adminAlert,setAdminAlert]=useState("");const [waiterAlert,setWaiterAlert]=useState("");const alarmTimer=useRef<ReturnType<typeof setInterval>|null>(null);
  const enableWaiterNotifications=async()=>{try{
   if(typeof window==="undefined")return;
-  if(!("Notification" in window)||!("serviceWorker" in navigator)||!("PushManager" in window)){notify("Este navegador no admite Web Push. En iPhone agregá MESA a la pantalla de inicio y abrila desde ahí.");return}
+  const C=window.AudioContext||(window as any).webkitAudioContext;
+  if(C){const ctx=waiterAudio.current||new C();waiterAudio.current=ctx;await ctx.resume();setWaiterNotifications(ctx.state==="running");alertWaiter("Prueba de sonido · Mesa")}
+  try{sessionStorage.setItem("mesa_sound_enabled","1")}catch{}
+  if(!("Notification" in window)||!("serviceWorker" in navigator)||!("PushManager" in window))return
   const registration=await navigator.serviceWorker.register("/mesa-sw.js");
   const permission=await Notification.requestPermission();
-  if(permission!=="granted"){notify("Para recibir avisos con pantalla bloqueada tenés que permitir las notificaciones.");return}
+  if(permission!=="granted")return
   const publicKey=process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
   if(!publicKey){return}
   const keyBytes=Uint8Array.from(atob(publicKey.replace(/-/g,"+").replace(/_/g,"/").padEnd(Math.ceil(publicKey.length/4)*4,"=")),c=>c.charCodeAt(0));
@@ -44,8 +47,6 @@ export default function Home(){
   if(!subscription.endpoint||!keys?.p256dh||!keys?.auth){notify("El dispositivo no devolvió una suscripción válida.");return}
   const {error}=await supabase.from("mesa_push_subscriptions").upsert({restaurant_id:restaurantId,user_id:userId,endpoint:subscription.endpoint,p256dh:keys.p256dh,auth_secret:keys.auth},{onConflict:"endpoint"});
   if(error){notify("No se pudo registrar este dispositivo: "+error.message);return}
-  const C=window.AudioContext||(window as any).webkitAudioContext;
-  if(C){const ctx=waiterAudio.current||new C();waiterAudio.current=ctx;await ctx.resume();setWaiterNotifications(ctx.state==="running");alertWaiter("Prueba de sonido · Mesa")}
   
 }catch(e:any){setWaiterNotifications(false);console.warn("Push no disponible",e)}};
  const alertWaiter=(message:string)=>{try{const cleaning=/limpiar|limpieza/i.test(message),ready=/pedido listo/i.test(message),payment=/cobrar|cuenta|pago/i.test(message);if(navigator.vibrate)navigator.vibrate(payment?[220,100,220,100,500]:[130,80,130]);const ctx=waiterAudio.current;if(ctx&&ctx.state==="running"){const notes=cleaning?[523,659,784,1046]:ready?[784,1046,784]:payment?[660,440,660,440,880,660,880,660]:[1046,1318,1568,1318,1568];notes.forEach((freq,i)=>{const at=ctx.currentTime+i*(payment?.22:.16),osc=ctx.createOscillator(),gain=ctx.createGain();osc.type=payment?"sawtooth":"sine";osc.frequency.setValueAtTime(freq,at);gain.gain.setValueAtTime(.0001,at);gain.gain.exponentialRampToValueAtTime(.65,at+.018);gain.gain.exponentialRampToValueAtTime(.0001,at+(payment?.18:.13));osc.connect(gain);gain.connect(ctx.destination);osc.start(at);osc.stop(at+(payment?.19:.14))})}if("Notification" in window&&Notification.permission==="granted"&&document.visibilityState!=="visible")new Notification(cleaning?"Mesa · Lista para limpiar":ready?"Mesa · Pedido listo":payment?"Mesa · Solicitud de cobro":"Mesa · Llamado al mozo",{body:message,tag:"mesa-waiter-alert"})}catch{}};
