@@ -400,3 +400,25 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 @keyframes mesaIchthysRays{0%,12%,67%,100%{opacity:0;transform:scale(.65) rotate(-12deg)}22%{opacity:.95;transform:scale(1.15) rotate(0deg)}48%{opacity:0;transform:scale(2.5) rotate(12deg)}}
 @media(max-width:700px){.mesaIchthysWatermark{right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));width:55px;height:42px;opacity:.65}}
 @media(prefers-reduced-motion:reduce){.mesaIchthysWatermark svg,.mesaIchthysGlow,.mesaIchthysWatermark:before,.mesaIchthysWatermark:after{animation:none}.mesaIchthysGlow{opacity:.25}}
+
+/* Landing: lanzamiento MESA, tarjeta comercial destacada */
+.mesaPricingEpic{gap:clamp(28px,6vw,90px)!important;align-items:center!important}
+.mesaPricingEpic h2{max-width:660px;letter-spacing:-.065em}
+.mesaPricingFeatures{display:grid;gap:12px;margin-top:25px}
+.mesaPricingFeatures span{display:flex;gap:10px;align-items:center;font-weight:650;font-size:14px}
+.mesaPricingFeatures svg{width:18px;height:18px;flex-shrink:0;color:#0fa54e;stroke-width:3}
+.mesaPricePromo{position:relative!important;overflow:visible!important;border:2px solid #111!important;background:linear-gradient(145deg,#fffdf8,#fff6e6)!important;box-shadow:9px 11px 0 #f2a100,0 25px 70px #d9a94c26!important;padding:clamp(22px,3vw,36px)!important;transition:transform .3s ease,box-shadow .3s ease}
+.mesaPricePromo:hover{transform:translateY(-5px);box-shadow:9px 16px 0 #f2a100,0 30px 80px #d9a94c35!important}
+.mesaPromoRibbon{display:flex;align-items:center;gap:8px;width:fit-content;padding:9px 12px;border-radius:999px;background:#111;color:#ffcc56;font-weight:900;letter-spacing:.06em;font-size:10px;margin-bottom:24px;animation:mesaPromoShine 3.8s ease-in-out infinite}
+.mesaPriceCaption{display:block;font-size:13px!important;color:#62574b}
+.mesaPriceOld{font-size:clamp(25px,3vw,33px);font-weight:800;color:#938679;text-decoration:line-through;text-decoration-thickness:2px;margin:6px 0}
+.mesaPriceOffer{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:0 0 6px}
+.mesaPriceOffer>b{font-size:clamp(42px,5vw,65px)!important;line-height:1.1;letter-spacing:-.075em;color:#111}
+.mesaDiscount{display:inline-flex;align-items:center;background:#0ba34a;color:white;padding:9px 13px;border-radius:11px;font-size:14px;font-weight:950;transform:rotate(-4deg);box-shadow:0 5px 0 #056b2d}
+.mesaPromoSaving{color:#07813a!important;font-weight:800!important;margin:8px 0 18px!important}
+.mesaPromoTerms{display:block;font-size:11px;color:#71675e;line-height:1.5;margin:15px 0}
+.mesaPricePromo .primary{background:#f6a400!important;color:#111!important;font-weight:900!important;min-height:52px;transition:transform .2s,background .2s}
+.mesaPricePromo .primary:hover{transform:translateY(-2px);background:#ffc042!important}
+@keyframes mesaPromoShine{0%,100%{box-shadow:0 0 0 0 #f5b83a00}45%{box-shadow:0 0 0 7px #f5b83a25}}
+@media(max-width:760px){.mesaPricingEpic{padding-top:65px!important;padding-bottom:65px!important}.mesaPricePromo{margin:14px 10px 10px 0}.mesaPromoRibbon{font-size:9px;letter-spacing:0}.mesaPriceOffer>b{font-size:44px!important}}
+@media(prefers-reduced-motion:reduce){.mesaPromoRibbon{animation:none}.mesaPricePromo{transition:none}}
