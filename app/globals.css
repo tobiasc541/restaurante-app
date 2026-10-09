@@ -868,3 +868,32 @@ html,body{background:#fff!important;width:210mm!important}.demoPortal{position:s
 .ownerHours{margin:18px 0;padding:18px;background:#fffaf3;border:1px solid #e9d9c4;border-radius:15px}.ownerHours h3{margin:0 0 8px}.ownerHours>p,.ownerBookingToggle p{font-size:12px;color:#756858;line-height:1.5}.ownerHourDay{border-top:1px solid #ebdfd0;padding:12px 0}.ownerHourDay>label{display:flex;align-items:center;gap:9px;font-weight:800}.ownerHourDay input[type=checkbox],.ownerBookingToggle input[type=checkbox]{width:16px;height:16px}.ownerHourSlot{display:flex;gap:8px;align-items:center;margin:8px 0 8px 24px}.ownerHourSlot select{width:auto;min-width:100px}.ownerHourSlot button,.ownerHourDay>button{background:#fff!important;color:#61401b!important;border:1px solid #dec6a2!important;padding:8px 10px!important;margin:3px!important}.ownerBookingToggle{border:1px solid #d5e9d7;background:#f4fbf4;border-radius:15px;padding:17px;margin:16px 0}.ownerBookingToggle label{display:flex;gap:8px;align-items:center}.directoryFilters input[type=date],.directoryFilters input[type=time]{width:100%;border:1px solid #e9dfd3;border-radius:8px;padding:9px;background:white;font:inherit}.directoryFilters .directoryCheck{display:flex;align-items:center;gap:8px}.directoryFilters .directoryCheck input{width:16px;height:16px}.directoryBookLink{display:inline-flex;padding:10px 13px;margin:10px 0 0;background:#13100c;color:#fff!important;border-radius:9px;font-size:12px;font-weight:800;text-decoration:none}.directoryHourList p{margin:5px 0!important;font-size:12px}.mesaBooking{min-height:100vh;background:#f6eee4;padding:clamp(22px,5vw,70px);color:#17120d}.mesaBooking>a{color:#9b5b08;font-weight:800}.mesaBooking h1{font-size:clamp(30px,5vw,54px);letter-spacing:-2px}.mesaBookingForm{max-width:680px;background:#fff;border-radius:20px;padding:25px;display:flex;flex-direction:column;gap:14px}.mesaBookingForm label,.mesaBooking>label{display:flex;flex-direction:column;gap:7px;font-weight:800}.mesaBookingForm input,.mesaBookingForm select,.mesaBooking>label select{border:1px solid #e4d8cb;padding:12px;border-radius:9px;font:inherit}.mesaBookingForm>button,.mesaBooking>button,.mesaBookingList button{border:0;background:#15110c;color:#fff;padding:12px 16px;border-radius:9px;cursor:pointer;font-weight:800}.mesaBookingForm button:disabled{opacity:.5}.mesaBookingTables{display:flex;flex-wrap:wrap;gap:9px}.mesaBookingTables button{border:1px solid #ddc7a8;background:#fff9ee;border-radius:11px;padding:15px;cursor:pointer}.mesaBookingTables button.chosen{background:#17120d;color:white}.mesaBookingList{display:grid;gap:12px;margin:20px 0}.mesaBookingList article{padding:20px;border-radius:15px;background:white;border:1px solid #e9d9c7}.mesaBookingList article button{margin:6px 8px 0 0}
 
 .mesaBookingMap{position:relative;display:flex;flex-wrap:wrap;gap:10px;min-height:300px;padding:20px;background:repeating-linear-gradient(0deg,#faf5ed 0px,#faf5ed 23px,#f0e7dc 24px),#faf5ed;border:2px solid #e0d0bc;border-radius:18px}.mesaBookingMap button{min-width:95px;min-height:65px;padding:10px;border-radius:16px;border:2px solid #d5ba91;background:#fff9ec;color:#271e13;font-weight:800;cursor:pointer}.mesaBookingMap button small{display:block;font-size:10px;font-weight:500;margin-top:5px}.mesaBookingMap button.chosen{background:#15110c;color:#fff;border-color:#15110c}.mesaBookingMap button:disabled{background:#e5e0db;color:#999;cursor:not-allowed;border-color:#ddd}
+
+
+/* MESA public accessibility and directory refinements */
+html,body,body *{cursor:auto}a,button,select,summary,[role="button"],input[type="checkbox"],input[type="date"]::-webkit-calendar-picker-indicator,label.ownerPhotoButton{cursor:pointer!important}input,textarea{cursor:text!important}button:disabled{cursor:not-allowed!important}
+.directoryCard .directoryImage{position:relative;overflow:hidden;background:#e9ddcb}
+.directoryCard .directoryImage img{display:block;width:100%;height:100%;object-fit:cover}
+.directoryCardBody{position:relative;z-index:1;background:#fff;color:#16120d;padding:13px!important}
+.directoryCardBody h3,.directoryCardBody p,.directoryCardBody strong,.directoryCardBody span{color:#16120d}
+.directoryCardTop{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.directoryDetailInfo{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:8px!important}
+.directoryDetailInfo>.directoryBookLink{display:block!important;position:static!important;width:fit-content;max-width:100%;white-space:normal;line-height:1.5;overflow-wrap:anywhere;margin:8px 0!important}
+.directoryDetailInfo b{margin-top:9px}
+.directoryDetailInfo p{margin:0!important;overflow-wrap:anywhere}
+.directoryDetailModal{max-height:min(85vh,900px);overflow-y:auto}
+.directoryStars{color:#f4b400!important;fill:#f4b400}
+.directoryReview .directoryStars{display:inline-block;animation:mesaStarIn .5s ease-out both;transform-origin:center}
+@keyframes mesaStarIn{0%{opacity:.3;transform:scale(.7)}70%{transform:scale(1.12)}100%{opacity:1;transform:scale(1)}}
+.directoryAddressPanel{background:#fffaf2;border:1px solid #ebddca;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px;overflow-wrap:anywhere}
+.directoryAddressPanel p{margin:0}.directoryAddressPanel a{font-weight:800;color:#9b5805}
+.ownerCuisinePicker{margin:16px 0}.ownerCuisinePicker>p{font-size:12px;color:#66594c}
+.ownerCuisineOptions{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+.ownerCuisineOptions label{display:flex!important;flex-direction:row!important;align-items:center;gap:7px;border:1px solid #e9ddcf;border-radius:30px;padding:8px 12px;background:#fff;cursor:pointer!important;font-size:12px!important}
+.ownerCuisineOptions label:has(input:checked){background:#fff0d1;border-color:#e0b764}
+.ownerCuisineOptions input{width:15px!important;height:15px!important}
+.ownerReservationPayment{display:grid;gap:12px;background:#fffdf5;border:1px solid #ecdcb7;border-radius:12px;padding:15px;margin:15px 0}
+.ownerReservationPayment small{font-size:12px;color:#755f44}
+.mesaDeposit{padding:17px;border:1px solid #dfb76c;background:#fff7e7;border-radius:13px;overflow-wrap:anywhere}
+.mesaDeposit p{margin:9px 0}.mesaDeposit small{font-size:12px}
+.mesaBookingMap button{z-index:1}.mesaBookingMap button:focus-visible{outline:3px solid #edaa30;outline-offset:3px}
