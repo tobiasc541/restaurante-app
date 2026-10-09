@@ -1003,3 +1003,33 @@ html,body,body *{cursor:auto}a,button,select,summary,[role="button"],input[type=
 @media(max-width:600px){.mesaBookingSuccess{padding:25px 12px 50px!important}.mesaSuccessCard{padding:27px 18px;border-radius:20px}.mesaSuccessDetails{gap:7px}.mesaSuccessDetails>div{padding:11px}.mesaSuccessDetails strong{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.mesaSuccessCard,.mesaSuccessEmblem,.mesaSuccessBurst i{animation:none!important}.mesaSuccessBurst{display:none}}
 @media print{.mesaSuccessActions,.mesaSuccessBurst{display:none!important}.mesaBookingSuccess{padding:0!important;background:white!important}.mesaSuccessCard{box-shadow:none;border:0}}
+
+/* Reservation command center */
+.mesaReservationToolbar{margin:14px 0 22px;display:flex;gap:12px;align-items:center}
+.mesaReservationToolbar button{border:0;border-radius:11px;padding:12px 17px;background:#17130e;color:#fff;font-weight:800;cursor:pointer}
+.mesaReservationInsights{display:grid;gap:17px;margin:22px 0}
+.mesaReservationMetrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.mesaReservationMetrics>div{background:#fff;border:1px solid #e8d8c7;border-radius:16px;padding:20px}
+.mesaReservationMetrics span{display:block;color:#75685b;font-size:12px;font-weight:750}
+.mesaReservationMetrics strong{display:block;font-size:36px;margin-top:8px;line-height:1.1}
+.mesaReservationForecast{background:#fff8e8;border:1px solid #e9cc90;border-radius:15px;padding:17px 20px}
+.mesaReservationForecast p{margin:0 0 7px;line-height:1.6}.mesaReservationForecast small{color:#71614c}
+.mesaReservationCalendar{background:#fff;border:1px solid #e8d8c7;border-radius:18px;padding:20px}
+.mesaReservationCalendarHeader{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:15px}
+.mesaReservationCalendarHeader h2{font-size:22px;margin:0}
+.mesaReservationCalendarHeader>div{display:flex;align-items:center;gap:12px;text-transform:capitalize}
+.mesaReservationCalendarHeader button{background:#faf4eb;border:1px solid #e6d5be;border-radius:9px;min-width:35px;min-height:35px;cursor:pointer;font-size:22px}
+.mesaReservationCalendarGrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px}
+.mesaReservationCalendarGrid .weekday{text-align:center;font-weight:800;color:#75685b;padding:8px}
+.mesaReservationDay{position:relative;min-width:0;min-height:74px;padding:11px;border:1px solid #ebdfd0;border-radius:11px;background:#faf8f5;overflow:hidden}
+.mesaReservationDay strong,.mesaReservationDay small{display:block;position:relative;z-index:1}
+.mesaReservationDay strong{font-size:16px}.mesaReservationDay small{font-size:11px;color:#685b4c;margin-top:6px}
+.mesaReservationDay>span{position:absolute;bottom:0;left:0;height:5px;background:#2a9a62;border-radius:0 6px 6px 0}
+.mesaReservationDay.peak{background:#fff0d4;border-color:#e5b660}.mesaReservationDay.peak>span{background:#e3a328}
+.mesaReservationDay.today{outline:2px solid #17130e;outline-offset:-2px}
+.mesaReservationTabs{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0 14px}
+.mesaReservationTabs button{border:1px solid #dfcdb9;border-radius:11px;padding:12px 18px;background:#fff;font-weight:800;cursor:pointer}
+.mesaReservationTabs button.selected{background:#18130f;color:white;border-color:#18130f}
+.mesaHistoryNote{padding:12px 16px;border-radius:12px;background:#fff8e8;border:1px solid #edd6aa;font-size:13px;line-height:1.5}
+@media(max-width:760px){.mesaReservationMetrics{grid-template-columns:repeat(2,minmax(0,1fr))}.mesaReservationCalendar{padding:12px}.mesaReservationCalendarGrid{gap:4px}.mesaReservationDay{min-height:61px;padding:7px 5px}.mesaReservationDay small{font-size:9px}.mesaReservationDay strong{font-size:13px}}
+@media(max-width:420px){.mesaReservationMetrics>div{padding:13px}.mesaReservationMetrics strong{font-size:29px}.mesaReservationCalendarGrid{gap:2px}.mesaReservationDay{min-height:54px}.mesaReservationDay small{font-size:8px}}
