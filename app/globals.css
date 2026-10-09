@@ -966,3 +966,40 @@ html,body,body *{cursor:auto}a,button,select,summary,[role="button"],input[type=
 .mesaTimeGrid button{min-width:0;border-radius:10px;transition:background .15s ease,border-color .15s ease}
 .mesaTimeGrid button:focus-visible,.mesaCalendarGrid button:focus-visible{outline:2px solid #b87b29;outline-offset:2px}
 @media(max-width:540px){.mesaCalendar{padding:10px}.mesaCalendarGrid{gap:3px}.mesaCalendarGrid button{min-height:35px}.mesaTimeGrid{grid-template-columns:repeat(4,minmax(0,1fr));max-height:275px}}
+
+/* Celebratory reservation request receipt */
+.mesaBookingSuccess{position:relative;min-height:100vh;max-width:none!important;display:flex;justify-content:center;align-items:flex-start;padding:64px 20px 90px!important;overflow:hidden;isolation:isolate}
+.mesaSuccessCard{position:relative;z-index:2;width:min(100%,650px);padding:42px;background:#fffdf9;border:1px solid #eadbc9;border-radius:28px;box-shadow:0 24px 70px #4b311a20;text-align:center;animation:mesaSuccessAppear .75s cubic-bezier(.18,.85,.25,1) both}
+.mesaSuccessEmblem{width:86px;height:86px;display:grid;place-items:center;margin:0 auto 18px;border-radius:50%;background:#dff5e5;border:2px solid #7dcf96;color:#0c7939;font-size:45px;font-weight:900;box-shadow:0 0 0 10px #e8f9ec;animation:mesaSuccessPop .75s cubic-bezier(.18,1.4,.35,1) both}
+.mesaSuccessEyebrow{font-size:12px;letter-spacing:.17em;text-transform:uppercase;color:#b27613;font-weight:900;margin-top:25px}
+.mesaSuccessCard h1{font-size:clamp(27px,4vw,40px);line-height:1.13;margin:10px 0 13px}
+.mesaSuccessLead{font-size:15px;line-height:1.65;color:#51473d;max-width:500px;margin:0 auto 25px}
+.mesaSuccessStatus{display:flex;gap:12px;align-items:flex-start;text-align:left;background:#fff5de;border:1px solid #efcc85;border-radius:14px;padding:15px;margin-bottom:22px}
+.mesaSuccessStatusDot{flex:0 0 12px;width:12px;height:12px;background:#d28b18;border-radius:50%;margin-top:5px;box-shadow:0 0 0 4px #fbe6b9}
+.mesaSuccessStatus strong,.mesaSuccessStatus small{display:block}.mesaSuccessStatus strong{font-size:14px}.mesaSuccessStatus small{font-size:12px;line-height:1.5;margin-top:5px;color:#65513a}
+.mesaSuccessDetails{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;text-align:left}
+.mesaSuccessDetails>div{padding:13px 15px;background:#faf5ee;border:1px solid #eee1d1;border-radius:12px;min-width:0}
+.mesaSuccessDetails span,.mesaSuccessCode span{display:block;font-size:11px;color:#786a5b;margin-bottom:5px}
+.mesaSuccessDetails strong{display:block;font-size:14px;overflow-wrap:anywhere}
+.mesaSuccessCode{margin-top:18px;border:1px dashed #d9b478;background:#fff8e9;padding:17px;border-radius:13px}
+.mesaSuccessCode strong{display:block;font-size:clamp(13px,2vw,19px);letter-spacing:.02em;overflow-wrap:anywhere}
+.mesaSuccessCode button{margin-top:10px;border:1px solid #e2c59a;background:white;border-radius:8px;padding:8px 13px;cursor:pointer;font-weight:750}
+.mesaSuccessPayment,.mesaSuccessNext{text-align:left;border-radius:14px;padding:18px;margin-top:16px}
+.mesaSuccessPayment{background:#f5f9f3;border:1px solid #d9e7d3}
+.mesaSuccessPayment>strong,.mesaSuccessNext>strong{display:block;margin-bottom:10px;font-size:15px}
+.mesaSuccessPayment p{margin:6px 0;font-size:13px;overflow-wrap:anywhere}
+.mesaSuccessNext{background:#f8f4ef;border:1px solid #e9dfd2}
+.mesaSuccessNext p{margin:0;line-height:1.6;font-size:13px;color:#554a40}
+.mesaSuccessActions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:22px}
+.mesaSuccessActions button,.mesaSuccessActions a{padding:13px 17px;border-radius:11px;text-decoration:none;font-weight:800;font-size:13px;cursor:pointer}
+.mesaSuccessActions button{border:0;background:#18130f;color:white}
+.mesaSuccessActions a{border:1px solid #e3d2bf;color:#18130f;background:white}
+.mesaSuccessBurst{position:absolute;z-index:1;left:50%;top:160px;pointer-events:none}
+.mesaSuccessBurst i{position:absolute;display:block;width:10px;height:18px;border-radius:3px;background:#eab34c;opacity:0;transform:rotate(var(--angle));animation:mesaConfetti 1.35s ease-out var(--delay) both}
+.mesaSuccessBurst i:nth-child(3n){background:#5cc889}.mesaSuccessBurst i:nth-child(4n){background:#e78e7a}.mesaSuccessBurst i:nth-child(5n){background:#9e89db}
+@keyframes mesaConfetti{0%{opacity:0;transform:rotate(var(--angle)) translateY(0) scale(.2)}12%{opacity:1}75%{opacity:1}100%{opacity:0;transform:rotate(var(--angle)) translateY(calc(-1 * var(--distance))) rotate(190deg) scale(1)}}
+@keyframes mesaSuccessPop{from{opacity:0;transform:scale(.2) rotate(-25deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes mesaSuccessAppear{from{opacity:0;transform:translateY(35px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:600px){.mesaBookingSuccess{padding:25px 12px 50px!important}.mesaSuccessCard{padding:27px 18px;border-radius:20px}.mesaSuccessDetails{gap:7px}.mesaSuccessDetails>div{padding:11px}.mesaSuccessDetails strong{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.mesaSuccessCard,.mesaSuccessEmblem,.mesaSuccessBurst i{animation:none!important}.mesaSuccessBurst{display:none}}
+@media print{.mesaSuccessActions,.mesaSuccessBurst{display:none!important}.mesaBookingSuccess{padding:0!important;background:white!important}.mesaSuccessCard{box-shadow:none;border:0}}
