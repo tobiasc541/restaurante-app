@@ -1113,3 +1113,9 @@ html,body,body *{cursor:auto}a,button,select,summary,[role="button"],input[type=
 footer .mesaBrandLogo{height:53px;max-width:250px}
 .mesaLegalFooter{display:block;margin-top:8px;font-size:11px;line-height:1.6;color:#82766c;letter-spacing:.01em}
 @media(max-width:640px){header .mesaBrandLogo{height:31px;max-width:150px}.portalTop .mesaBrandLogo{height:29px;max-width:142px}.bigBrand .mesaBrandLogo{height:48px;max-width:230px}footer .mesaBrandLogo{height:44px;max-width:210px}.mesaLegalFooter{font-size:10px}}
+
+/* Preserve the complete 4K logo, including the cloche finial and lower strokes. */
+.brand:has(.mesaBrandLogo), .bigBrand:has(.mesaBrandLogo){overflow:visible;flex-shrink:0;min-height:0}
+.mesaBrandLogo{box-sizing:content-box!important;object-fit:contain!important;object-position:center center!important;max-height:none!important;clip-path:none!important;overflow:visible!important;padding:5px 3px!important;vertical-align:middle}
+header .brand, .portalTop .brand, footer .brand{overflow:visible!important}
+@media(max-width:640px){.mesaBrandLogo{padding:4px 2px!important}}
