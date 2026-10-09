@@ -1104,3 +1104,12 @@ html,body,body *{cursor:auto}a,button,select,summary,[role="button"],input[type=
 .mesaGuestExtras label input{accent-color:#13853d;width:17px;height:17px;flex-shrink:0}
 .mesaGuestExtras label span{flex:1}
 .mesaGuestExtras label b{white-space:nowrap;font-size:12px;color:#147c3d}
+
+/* MESA brand identity — 2026 */
+.brand:has(.mesaBrandLogo){display:inline-flex;align-items:center;gap:0;min-width:0;text-decoration:none}
+.mesaBrandLogo{display:block;width:auto;height:39px;max-width:min(220px,100%);object-fit:contain;object-position:left center;flex-shrink:0}
+.portalTop .mesaBrandLogo{height:36px;max-width:180px}
+.bigBrand .mesaBrandLogo{height:64px;max-width:min(300px,100%)}
+footer .mesaBrandLogo{height:53px;max-width:250px}
+.mesaLegalFooter{display:block;margin-top:8px;font-size:11px;line-height:1.6;color:#82766c;letter-spacing:.01em}
+@media(max-width:640px){header .mesaBrandLogo{height:31px;max-width:150px}.portalTop .mesaBrandLogo{height:29px;max-width:142px}.bigBrand .mesaBrandLogo{height:48px;max-width:230px}footer .mesaBrandLogo{height:44px;max-width:210px}.mesaLegalFooter{font-size:10px}}
