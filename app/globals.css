@@ -945,3 +945,13 @@ html,body,body *{cursor:auto}a,button,select,summary,[role="button"],input[type=
 .mesaTimeGrid button{min-height:36px;border:1px solid;border-radius:8px;font-weight:800;font-size:12px;cursor:pointer}
 .mesaTimeGrid button:disabled{cursor:not-allowed;opacity:.7}
 @media(max-width:500px){.mesaTimeGrid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* Reservation admin actions: readable, visible and distinct */
+.mesaReservationAdmin article{display:flex;flex-direction:column;align-items:flex-start;gap:9px;padding:20px!important;border:1px solid #e9dccd;border-radius:16px;background:#fff}
+.mesaReservationAdmin article p{margin:0;line-height:1.5}
+.mesaReservationAdmin .mesaPaymentActions{display:flex;flex-wrap:wrap;gap:9px;width:100%;margin:7px 0}
+.mesaReservationAdmin .mesaPaymentActions button,.mesaReservationAdmin article>div:not(.mesaPaymentActions) button{appearance:none;display:inline-flex;align-items:center;justify-content:center;min-height:39px;padding:10px 14px!important;border:1px solid #d9c8b4!important;border-radius:10px!important;background:#fff9f0!important;color:#2c2015!important;font-weight:750!important;font-size:13px!important;line-height:1.3!important;opacity:1;cursor:pointer;white-space:normal;text-align:center}
+.mesaReservationAdmin .mesaPaymentActions button:first-child{background:#e5f5e9!important;color:#126633!important;border-color:#add7b8!important}
+.mesaReservationAdmin .mesaPaymentActions button:last-child{background:#fff0ee!important;color:#a52c26!important;border-color:#e9bbb6!important}
+.mesaReservationAdmin .mesaPaymentActions button:disabled{opacity:.45;cursor:default}
+.mesaReservationAdmin .mesaWhatsappButton{display:inline-flex;align-items:center;min-height:39px;padding:10px 15px;background:#087a43;color:#fff!important;border-radius:10px;font-weight:750;text-decoration:none}
