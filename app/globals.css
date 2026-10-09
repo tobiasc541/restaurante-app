@@ -924,3 +924,24 @@ html,body,body *{cursor:auto}a,button,select,summary,[role="button"],input[type=
 .directoryFilterChecks .directoryCheck input{width:17px!important;height:17px!important;flex:none;margin:0;accent-color:#c18500}
 .directoryResetFilters{width:100%;border:1px solid #e4d5c3;background:#f8f1e8;color:#3b2b1c;border-radius:10px;padding:11px;font-weight:800;cursor:pointer}
 @media(max-width:680px){.directoryCardActions{flex-direction:column}.directoryCardActions .directoryInfoButton,.directoryCardActions .directoryBookLink{flex:0 0 auto;width:100%!important}}
+
+/* Native-feeling MESA booking calendar and availability picker */
+.mesaCustomDate,.mesaCustomTime{position:relative;display:flex;flex-direction:column;gap:9px;margin:12px 0}
+.mesaDateTrigger{width:100%;display:flex;justify-content:space-between;align-items:center;min-height:43px;border:1px solid #e4d8ca;border-radius:10px;background:#fff;color:#201b16;padding:11px 13px;text-align:left;font-weight:700;cursor:pointer}
+.mesaDateTrigger.invalid{border-color:#d94141;background:#fff1f0;color:#a52020}
+.mesaCalendar{position:relative;width:100%;background:#fffaf4;border:1px solid #e8d7c2;border-radius:14px;padding:14px;box-shadow:0 8px 22px #3d2a1414;z-index:3}
+.mesaCalendarHeader{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;text-transform:capitalize}
+.mesaCalendarHeader button{border:1px solid #e9dac9;background:#fff;border-radius:9px;min-width:38px;min-height:35px;cursor:pointer}
+.mesaCalendarGrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
+.mesaCalendarGrid button{border:1px solid transparent;border-radius:8px;min-height:38px;font-weight:800;cursor:pointer}
+.mesaCalendarWeekday{text-align:center;font-weight:800;font-size:12px;padding:8px 0}
+.mesaCalendarGrid .available,.mesaTimeGrid .available{background:#e5f5e9;color:#136b35;border-color:#b7dfc2}
+.mesaCalendarGrid .blocked,.mesaTimeGrid .blocked{background:#fff0ef;color:#b44a42;border-color:#f0c9c5}
+.mesaCalendarGrid .selected,.mesaTimeGrid .chosen{background:#18140f!important;color:#fff!important;border-color:#18140f!important}
+.mesaCalendar small{display:block;margin-top:12px;color:#62584b}.mesaLegendAvailable{color:#168344}.mesaLegendBlocked{color:#c4483c}
+.mesaBookingError{padding:11px 12px;background:#fff0ef;border:1px solid #efb5ae;border-radius:9px;color:#a52222;font-weight:700}
+.mesaCustomTime>p{font-size:12px;color:#6c6052;margin:0}
+.mesaTimeGrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;max-height:235px;overflow-y:auto;padding:2px}
+.mesaTimeGrid button{min-height:36px;border:1px solid;border-radius:8px;font-weight:800;font-size:12px;cursor:pointer}
+.mesaTimeGrid button:disabled{cursor:not-allowed;opacity:.7}
+@media(max-width:500px){.mesaTimeGrid{grid-template-columns:repeat(4,minmax(0,1fr))}}
