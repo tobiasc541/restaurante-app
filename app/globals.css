@@ -1090,3 +1090,10 @@ html,body,body *{cursor:auto}a,button,select,summary,[role="button"],input[type=
 @keyframes mesaOwnerWords{0%,19%{transform:translateY(0)}25%,44%{transform:translateY(-20%)}50%,69%{transform:translateY(-40%)}75%,94%{transform:translateY(-60%)}100%{transform:translateY(-80%)}}
 @media(prefers-reduced-motion:reduce){.mesaBenefitsTrack,.mesaOwnerRotatorTrack{animation:none}}
 @media(max-width:600px){.mesaBenefitsHero{gap:7px;margin-bottom:26px}.mesaBenefitsWindow{--mesa-line:48px}.mesaBenefitsTrack>span{font-size:clamp(26px,7.5vw,42px)}}
+
+/* Daily menu featured product: shared category across existing product persistence and QR. */
+.mesaDailyAdd{border:1px solid #e3aa37!important;background:#fff0ca!important;color:#654000!important;border-radius:999px!important;padding:11px 17px!important;font-weight:800!important;cursor:pointer}
+.mesaDailySpecial{background:#fff4d8!important;border:2px solid #e6b449!important;border-radius:16px!important;position:relative;flex-wrap:wrap;box-shadow:0 5px 20px rgba(168,105,0,.12)}
+.mesaDailyBadge{display:block!important;flex-basis:100%;font-size:11px!important;font-weight:900!important;letter-spacing:.08em;color:#935800!important;margin-bottom:5px}
+.mesaDailyToggle{display:flex!important;align-items:center;gap:10px;padding:10px 0;font-weight:700}
+.mesaDailyToggle input{width:18px!important;height:18px!important;accent-color:#07872d}
