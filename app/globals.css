@@ -1073,3 +1073,20 @@ html,body,body *{cursor:auto}a,button,select,summary,[role="button"],input[type=
 @media (prefers-reduced-motion:reduce) {
   :where(button) { transition:none!important; }
 }
+
+/* Centered benefit headline: vertical Uiverse-inspired text reel, no JS timers */
+.mesaBenefitsHero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;margin:0 auto 36px;max-width:1100px;padding:0 16px}
+.mesaBenefitsPrefix{font-size:clamp(22px,4.2vw,62px);font-weight:850;line-height:1.06;letter-spacing:-.055em;color:#101010}
+.mesaBenefitsWindow{--mesa-line:clamp(46px,7.1vw,100px);height:var(--mesa-line);overflow:hidden;position:relative;max-width:100%;padding:0 12px}
+.mesaBenefitsTrack{display:flex;flex-direction:column;animation:mesaBenefitsRoll 52s infinite}
+.mesaBenefitsTrack>span{height:var(--mesa-line);min-height:var(--mesa-line);display:flex;align-items:center;justify-content:center;white-space:nowrap;font-size:clamp(30px,6.5vw,88px);font-weight:850;letter-spacing:-.065em;color:#07872d;line-height:1}
+.mesaBenefitsWindow::after,.mesaOwnerRotatorWindow::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,#f5ede4 0%,transparent 19%,transparent 81%,#f5ede4 100%)}
+@keyframes mesaBenefitsRoll{0.000%,6.492%{transform:translateY(-0%);}7.692%,14.185%{transform:translateY(-7.142857142857143%);}15.385%,21.877%{transform:translateY(-14.285714285714286%);}23.077%,29.569%{transform:translateY(-21.428571428571427%);}30.769%,37.262%{transform:translateY(-28.571428571428573%);}38.462%,44.954%{transform:translateY(-35.714285714285715%);}46.154%,52.646%{transform:translateY(-42.857142857142854%);}53.846%,60.338%{transform:translateY(-50%);}61.538%,68.031%{transform:translateY(-57.142857142857146%);}69.231%,75.723%{transform:translateY(-64.28571428571429%);}76.923%,83.415%{transform:translateY(-71.42857142857143%);}84.615%,91.108%{transform:translateY(-78.57142857142857%);}92.308%,98.800%{transform:translateY(-85.71428571428571%);}100%{transform:translateY(-92.85714285714286%)}}
+.mesaOwnerRotator{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-weight:700;font-size:clamp(13px,1.6vw,19px);margin-top:8px}
+.mesaOwnerRotatorWindow{height:28px;overflow:hidden;position:relative}
+.mesaOwnerRotatorTrack{display:flex;flex-direction:column;animation:mesaOwnerWords 16s infinite}
+.mesaOwnerRotatorTrack>span{height:28px;display:flex;align-items:center;color:#07872d}
+.mesaOwnerRotatorWindow::after{background:linear-gradient(to bottom,#fff 0%,transparent 22%,transparent 78%,#fff 100%)}
+@keyframes mesaOwnerWords{0%,19%{transform:translateY(0)}25%,44%{transform:translateY(-20%)}50%,69%{transform:translateY(-40%)}75%,94%{transform:translateY(-60%)}100%{transform:translateY(-80%)}}
+@media(prefers-reduced-motion:reduce){.mesaBenefitsTrack,.mesaOwnerRotatorTrack{animation:none}}
+@media(max-width:600px){.mesaBenefitsHero{gap:7px;margin-bottom:26px}.mesaBenefitsWindow{--mesa-line:48px}.mesaBenefitsTrack>span{font-size:clamp(26px,7.5vw,42px)}}
