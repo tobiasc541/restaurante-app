@@ -1,0 +1,11 @@
+/* MESA mascot illustrations — static, responsive, decorative only. */
+.mesaMascot{display:block;width:100%;height:auto;object-fit:contain;pointer-events:none;user-select:none}
+.mesaMascotHero{width:clamp(105px,14vw,185px);max-height:205px;object-position:left bottom;margin:8px 0 0}
+.mesaMascotHeader{width:96px;max-height:112px;flex:0 0 auto;margin-left:auto}
+.mesaMascotHeaderWide{width:120px;max-height:135px;flex:0 0 auto;margin-left:auto}
+.mesaMascotWelcome{width:135px;max-height:175px;margin:0 auto 12px}
+.mesaMascotSetup{width:125px;max-height:160px;margin:0 auto 14px}
+.mesaMascotInline{width:85px;max-height:105px;margin:0 0 10px auto}
+.mesaMascotRow{display:flex;align-items:center;gap:12px;min-width:0}
+.mesaMascotRow>div:first-child{min-width:0;flex:1}
+@media(max-width:650px){.mesaMascotHero{width:112px;max-height:145px}.mesaMascotHeader,.mesaMascotHeaderWide{width:72px;max-height:94px}.mesaMascotWelcome{width:105px;max-height:135px}.mesaMascotSetup{width:100px;max-height:130px}.mesaMascotRow{gap:8px}}
