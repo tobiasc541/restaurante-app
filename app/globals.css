@@ -1033,3 +1033,20 @@ html,body,body *{cursor:auto}a,button,select,summary,[role="button"],input[type=
 .mesaHistoryNote{padding:12px 16px;border-radius:12px;background:#fff8e8;border:1px solid #edd6aa;font-size:13px;line-height:1.5}
 @media(max-width:760px){.mesaReservationMetrics{grid-template-columns:repeat(2,minmax(0,1fr))}.mesaReservationCalendar{padding:12px}.mesaReservationCalendarGrid{gap:4px}.mesaReservationDay{min-height:61px;padding:7px 5px}.mesaReservationDay small{font-size:9px}.mesaReservationDay strong{font-size:13px}}
 @media(max-width:420px){.mesaReservationMetrics>div{padding:13px}.mesaReservationMetrics strong{font-size:29px}.mesaReservationCalendarGrid{gap:2px}.mesaReservationDay{min-height:54px}.mesaReservationDay small{font-size:8px}}
+
+/* Landing demo embeds the EXACT production screens, not miniature substitutes. */
+.mesaLandingOwnerBody .mesaEmbeddedRealDemo{width:100%;min-width:0;background:#f7f1e9;overflow:visible}
+.mesaLandingOwnerBody:has(.mesaEmbeddedRealDemo){overflow:visible!important}
+.mesaLandingOwnerApp:has(.mesaEmbeddedRealDemo){overflow:visible;min-height:900px}
+.mesaEmbeddedRealDemo .ownerPublic,.mesaEmbeddedRealDemo .mesaBooking{min-height:0;width:100%;box-sizing:border-box}
+.mesaEmbeddedRealDemo .ownerPublic{padding:0}
+.mesaEmbeddedRealDemo .ownerPublic>header{padding:12px 18px}
+.mesaEmbeddedRealDemo .ownerPublicIntro{padding:24px 18px 12px}
+.mesaEmbeddedRealDemo .ownerPublicGrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.mesaEmbeddedRealDemo .ownerPublicPanel{min-width:0}
+.mesaEmbeddedRealDemo .mesaBooking{padding:22px 18px}
+.mesaEmbeddedRealDemo .mesaReservationMetrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+.mesaEmbeddedRealDemo .mesaReservationDay{min-height:60px;padding:7px 5px}
+.mesaEmbeddedRealDemo .mesaReservationCalendar{padding:12px}
+@media(max-width:1100px){.mesaEmbeddedRealDemo .ownerPublicGrid{grid-template-columns:minmax(0,1fr)}.mesaEmbeddedRealDemo .mesaReservationMetrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.mesaEmbeddedRealDemo .mesaReservationCalendarGrid{gap:3px}.mesaEmbeddedRealDemo .mesaReservationDay{min-height:48px}.mesaEmbeddedRealDemo .ownerPublicIntro{padding:16px 10px}.mesaEmbeddedRealDemo .mesaBooking{padding:12px 8px}}
