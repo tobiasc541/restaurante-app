@@ -7,7 +7,7 @@ import {QRCodeSVG} from "qrcode.react";
 import {ShinyText,CountDownPrice} from "./MesaEffects";
 import PeekRating from "./PeekRating";
 import CircularCarousel from "./CircularCarousel";
-import {ArrowRight,Bell,Check,ChevronRight,CircleDollarSign,Clock3,CreditCard,LayoutDashboard,LogIn,Menu,ReceiptText,Search,Sparkles,Star,UsersRound,UtensilsCrossed,WalletCards,X,Plus,ChefHat,MapPin,BarChart3,BookOpen,Pencil,Armchair,Package,Activity,History,TriangleAlert} from "lucide-react";
+import {ArrowRight,Bell,Check,ChevronRight,CircleDollarSign,Clock3,CreditCard,LayoutDashboard,LogIn,Menu,ReceiptText,Search,Sparkles,Star,UsersRound,UtensilsCrossed,WalletCards,X,Plus,ChefHat,MapPin,BarChart3,BookOpen,Pencil,Armchair,Package,Activity,History,TriangleAlert,Trash2} from "lucide-react";
 
 const requests=[["Mesa 14","Pide la cuenta","hot"],["Mesa 07","Llamó al mozo","wait"],["Mesa 03","Sin solicitudes","ok"]];
 const OWNER_NAV=[[LayoutDashboard,"Inicio"],[Armchair,"Salón"],[UtensilsCrossed,"Mesas"],[UsersRound,"Personal"],[ReceiptText,"Pedidos"],[BookOpen,"Menú"],[ChefHat,"Cocina en vivo"],[Star,"Reseñas"],[CircleDollarSign,"Propinas"],[BarChart3,"Reportes"],[CreditCard,"Alias"],[Sparkles,"Tutoriales"]];
