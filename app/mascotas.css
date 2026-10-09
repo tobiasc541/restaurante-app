@@ -1,11 +1,28 @@
-/* MESA mascot illustrations — static, responsive, decorative only. */
-.mesaMascot{display:block;width:100%;height:auto;object-fit:contain;pointer-events:none;user-select:none}
-.mesaMascotHero{width:clamp(105px,14vw,185px);max-height:205px;object-position:left bottom;margin:8px 0 0}
-.mesaMascotHeader{width:96px;max-height:112px;flex:0 0 auto;margin-left:auto}
-.mesaMascotHeaderWide{width:120px;max-height:135px;flex:0 0 auto;margin-left:auto}
-.mesaMascotWelcome{width:135px;max-height:175px;margin:0 auto 12px}
-.mesaMascotSetup{width:125px;max-height:160px;margin:0 auto 14px}
-.mesaMascotInline{width:85px;max-height:105px;margin:0 0 10px auto}
-.mesaMascotRow{display:flex;align-items:center;gap:12px;min-width:0}
-.mesaMascotRow>div:first-child{min-width:0;flex:1}
-@media(max-width:650px){.mesaMascotHero{width:112px;max-height:145px}.mesaMascotHeader,.mesaMascotHeaderWide{width:72px;max-height:94px}.mesaMascotWelcome{width:105px;max-height:135px}.mesaMascotSetup{width:100px;max-height:130px}.mesaMascotRow{gap:8px}}
+/* MESA: static brand mascots. Layout-safe presentation. */
+.mesaMascot{display:block;height:auto;max-width:100%;object-fit:contain;pointer-events:none;user-select:none}
+/* Marketing hero: big mascot in its own right column; copy never gets pushed down. */
+.hero:has(.mesaHeroMascot){grid-template-columns:minmax(0,1fr) minmax(290px,0.82fr)!important;gap:clamp(20px,4vw,70px)!important;align-items:center!important}
+.hero .mesaHeroMascot{grid-column:2;grid-row:1;display:flex;justify-content:center;align-items:end;min-width:0;position:relative;z-index:2}
+.hero .mesaHeroMascot .mesaMascotHero{width:min(100%,530px);max-height:610px;filter:drop-shadow(0 22px 20px rgba(77,50,18,.14))}
+.hero:has(.mesaHeroMascot)>.mesaHeroDevice{display:none!important}
+.hero:has(.mesaHeroMascot)>.heroText{grid-column:1!important;grid-row:1;min-width:0!important}
+/* Menu: text and buttons keep their original order; mascot is positioned independently. */
+.menuManagerHead.mesaMascotMenuHead{position:relative!important;display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;flex-wrap:wrap!important;gap:10px 12px!important;padding-right:120px!important;min-height:114px}
+.menuManagerHead.mesaMascotMenuHead>div:first-child{flex:1 1 280px;min-width:0;order:0}
+.menuManagerHead.mesaMascotMenuHead>button{order:1;flex:0 0 auto}
+.menuManagerHead.mesaMascotMenuHead>.mesaMascotHeader{position:absolute;right:0;top:50%;transform:translateY(-50%);width:106px;max-height:124px;margin:0}
+/* Billing: copy and totals align normally; mascot decorates the far edge. */
+.billingHead.mesaMascotBillingHead{position:relative!important;display:flex!important;flex-wrap:wrap!important;flex-direction:row!important;align-items:center!important;gap:14px!important;padding-right:128px!important;min-height:128px}
+.billingHead.mesaMascotBillingHead>div:first-child{flex:1 1 250px;min-width:0}
+.billingHead.mesaMascotBillingHead>.billingTotal{flex:0 0 auto}
+.billingHead.mesaMascotBillingHead>.mesaMascotHeader{position:absolute;right:0;top:50%;transform:translateY(-50%);width:118px;max-height:133px;margin:0}
+/* Tutorials: mascot shares a single header row with copy, never floats above it. */
+.tutorialHero{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:150px}
+.tutorialHero>.mesaTutorialIntro{flex:1;min-width:0}
+.tutorialHero>.mesaMascotInline{width:138px;max-height:155px;flex:0 0 138px;margin:0;align-self:flex-end}
+/* Setup and welcome: no changes to form and control order. */
+.setupRestaurant>div{position:relative;padding-right:155px}
+.setupRestaurant .mesaMascotSetup{position:absolute;right:20px;top:28px;width:115px;max-height:145px;margin:0}
+.mesaLandingGuestWelcome .mesaMascotWelcome{width:120px;max-height:150px;margin:0 auto 12px}
+@media(max-width:1100px){.menuManagerHead.mesaMascotMenuHead{padding-right:105px!important}.menuManagerHead.mesaMascotMenuHead>.mesaMascotHeader{width:88px}.billingHead.mesaMascotBillingHead{padding-right:110px!important}.billingHead.mesaMascotBillingHead>.mesaMascotHeader{width:95px}}
+@media(max-width:760px){.hero:has(.mesaHeroMascot){grid-template-columns:minmax(0,1fr)!important;gap:8px!important}.hero:has(.mesaHeroMascot)>.heroText{grid-column:1!important;grid-row:1}.hero .mesaHeroMascot{grid-column:1;grid-row:2;justify-content:center}.hero .mesaHeroMascot .mesaMascotHero{width:min(75vw,330px);max-height:370px}.menuManagerHead.mesaMascotMenuHead{padding-right:0!important;display:flex!important;flex-direction:row!important;align-items:flex-start!important;min-height:0}.menuManagerHead.mesaMascotMenuHead>div:first-child{flex:1 1 175px}.menuManagerHead.mesaMascotMenuHead>.mesaMascotHeader{position:relative;right:auto;top:auto;transform:none;width:78px;max-height:95px;order:0;margin:0 0 0 auto}.menuManagerHead.mesaMascotMenuHead>button{order:2}.billingHead.mesaMascotBillingHead{padding-right:90px!important;min-height:100px}.billingHead.mesaMascotBillingHead>.mesaMascotHeader{width:75px;max-height:90px}.tutorialHero{min-height:110px;gap:10px}.tutorialHero>.mesaMascotInline{width:85px;max-height:110px;flex-basis:85px}.tutorialHero h2{font-size:clamp(25px,6vw,38px)}.setupRestaurant>div{padding-right:30px}.setupRestaurant .mesaMascotSetup{position:static;width:100px;margin:18px auto 0}}
