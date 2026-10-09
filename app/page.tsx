@@ -6,8 +6,8 @@ const supabase=createClient("https://oietadzixpglmkiokihj.supabase.co","sb_publi
 import {QRCodeSVG} from "qrcode.react";
 import {ShinyText,CountDownPrice} from "./MesaEffects";
 import PeekRating from "./PeekRating";
-import MisReservas from "./mis-reservas/page";
-import MiRestaurante from "./mi-restaurante/page";
+import MisReservas from "./components/MisReservas";
+import MiRestaurante from "./components/MiRestaurante";
 import CircularCarousel from "./CircularCarousel";
 import {ArrowRight,Bell,Check,ChevronRight,CircleDollarSign,Clock3,CreditCard,LayoutDashboard,LogIn,Menu,ReceiptText,Search,Sparkles,Star,UsersRound,UtensilsCrossed,WalletCards,X,Plus,ChefHat,MapPin,BarChart3,BookOpen,Pencil,Armchair,Package,Activity,History,TriangleAlert,Trash2} from "lucide-react";
 
