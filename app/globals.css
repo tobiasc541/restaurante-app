@@ -1119,3 +1119,27 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
 .tutorialCenter .mesaTutorialIntro{flex:0 1 auto;min-width:0}
 .tutorialCenter .tutorialHero .mesaMascotInline{flex:0 0 112px;width:112px;max-width:112px;height:132px;object-fit:contain;object-position:center bottom;margin:0;align-self:center}
 @media(max-width:760px){.tutorialCenter .tutorialHero{gap:10px;max-width:100%}.tutorialCenter .tutorialHero .mesaMascotInline{flex-basis:76px;width:76px;max-width:76px;height:96px}.tutorialCenter .tutorialHero h2{font-size:clamp(25px,6vw,34px)}}
+
+/* Keep sector pictograms attached to their labels in both owner and waiter maps. */
+.salonExperience .newPlan .floorObject,
+.salonExperience .newPlan .floorObject.bar,
+.salonExperience .newPlan .floorObject.kitchen,
+.salonExperience .newPlan .floorObject.label {
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  min-width: 0;
+  width: max-content;
+  max-width: 75%;
+  padding: 5px 8px;
+  line-height: 1.25;
+}
+.salonExperience .newPlan .floorObject > span:first-child { position: static; display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; margin: 0; line-height: 1; }
+.salonExperience .newPlan .floorObject > span:last-child { position: static; flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.salonExperience.compact .newPlan .floorObject { max-width: 110px; padding: 4px 6px; gap: 3px; font-size: 9px; }
