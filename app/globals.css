@@ -1243,3 +1243,36 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
 .directoryFilters .mesaDirectorySwitchRow.mesaDirectoryAutoOpen{grid-template-columns:minmax(0,1fr) 42px;column-gap:8px}
 .directoryFilters .mesaDirectoryAutoOpen>span:first-child{grid-column:1;min-width:0}
 .directoryFilters .mesaDirectoryAutoOpen>.mesaSunMoon{grid-column:2;justify-self:end;pointer-events:none;cursor:default}
+
+/* MESA Social — first phase, brand-native account and follow experience */
+.mesaSocialPage{min-height:100vh;background:#f6efe6;color:#1a140f;font-family:inherit}
+.mesaSocialHeader{height:76px;display:flex;align-items:center;justify-content:space-between;padding:10px max(24px,calc((100vw - 1120px)/2));border-bottom:1px solid #e7dac9;background:#fffaf3}
+.mesaSocialHeader img{height:43px;max-width:170px;object-fit:contain}
+.mesaSocialHeader nav{display:flex;gap:22px;align-items:center}.mesaSocialHeader nav a{color:#312419;text-decoration:none;font-size:13px;font-weight:800}
+.mesaSocialHero{text-align:center;max-width:700px;margin:0 auto;padding:85px 24px 58px}
+.mesaSocialEyebrow{display:block;color:#9c671f;font-size:11px;font-weight:950;letter-spacing:.2em;text-transform:uppercase}
+.mesaSocialHero h1{font-size:clamp(39px,6vw,74px);line-height:1.05;letter-spacing:-.065em;margin:16px 0}
+.mesaSocialHero p{max-width:540px;margin:0 auto;color:#685c50;font-size:16px;line-height:1.7}
+.mesaSocialAuth{max-width:1020px;margin:0 auto 110px;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.mesaSocialAuthIntro{border-radius:24px;background:#211910;color:#fff;padding:45px 38px;min-height:410px}
+.mesaSocialAuthIntro h2{font-size:clamp(30px,4vw,48px);line-height:1.08;letter-spacing:-.05em;margin:22px 0}
+.mesaSocialAuthIntro>p{color:#d4c6b6;line-height:1.6;margin-bottom:35px}
+.mesaSocialPerk{display:flex;align-items:center;gap:10px;margin:17px 0;color:#f4e8d6;font-size:13px}.mesaSocialPerk svg{color:#e8af53;flex:none}
+.mesaSocialAuthForm{background:#fff;border:1px solid #e9d9c5;border-radius:24px;padding:38px;display:grid;gap:14px;align-content:center}
+.mesaSocialAuthForm h2{font-size:28px;letter-spacing:-.04em;margin:0}.mesaSocialAuthForm>p{color:#796a5c;margin:0 0 10px;font-size:13px}
+.mesaSocialAuthForm label{display:grid;gap:7px;font-size:12px;font-weight:850}
+.mesaSocialAuthForm label>div{display:flex;align-items:center;gap:9px;padding:0 12px;border:1px solid #e5d7c7;border-radius:11px;background:#fff}
+.mesaSocialAuthForm input{width:100%;height:45px;min-width:0;outline:0;border:0;background:transparent;font:inherit;font-size:13px}
+.mesaSocialPrimary{display:inline-flex;align-items:center;justify-content:center;min-height:46px;border:0;border-radius:12px;background:#1c150e;color:white!important;padding:12px 20px;text-decoration:none;font-weight:900;font-size:13px;cursor:pointer}
+.mesaSocialPrimary:disabled{opacity:.5;cursor:wait}
+.mesaSocialMode,.mesaSocialQuietButton{border:0;background:transparent;cursor:pointer;color:#80501c;font-size:12px;font-weight:800;padding:9px}
+.mesaSocialMessage{padding:12px;border-radius:10px;background:#fff1d9;color:#6e4010;font-size:12px}
+.mesaSocialPanel{max-width:940px;margin:0 auto 100px;background:white;border:1px solid #e8d8c5;border-radius:23px;padding:34px}
+.mesaSocialPanelHeading{display:flex;justify-content:space-between;gap:15px;align-items:center}.mesaSocialPanelHeading h2{font-size:34px;letter-spacing:-.05em;margin:8px 0}.mesaSocialPanelHeading p{font-size:12px;color:#746659}
+.mesaSocialQuietButton{display:flex;align-items:center;gap:7px}
+.mesaSocialEmpty{text-align:center;padding:65px 20px}.mesaSocialEmpty>svg{color:#c98c43}.mesaSocialEmpty h3{font-size:23px;margin:15px 0 8px}.mesaSocialEmpty p{color:#77685b;margin-bottom:24px}
+.mesaSocialFollowList{display:grid;gap:10px;margin-top:26px}.mesaSocialFollowList article{display:flex;align-items:center;gap:14px;border:1px solid #eaddca;border-radius:14px;padding:14px}.mesaSocialFollowAvatar{width:44px;height:44px;border-radius:12px;background:#f8e7cd;display:grid;place-items:center;color:#9c601c}.mesaSocialFollowList article>div:nth-child(2){display:grid;gap:5px;flex:1}.mesaSocialFollowList small{color:#78685a}.mesaSocialFollowList button{border:1px solid #e1cdb5;background:white;border-radius:10px;padding:10px;font-weight:800;cursor:pointer}
+.mesaSocialFooter{border-top:1px solid #e9d9c5;padding:24px max(24px,calc((100vw - 1120px)/2));display:flex;justify-content:space-between;gap:15px;color:#8c7c6d;font-size:12px}.mesaSocialFooter a{display:flex;align-items:center;gap:8px;color:#352719;text-decoration:none}
+.directoryCardActions .mesaSocialFollowButton{width:100%;min-height:37px;border:1px solid #cfa365;border-radius:9px;background:#fff6e8;color:#7a4b13;font-size:12px;font-weight:900;cursor:pointer}
+.directoryCardActions .mesaSocialFollowButton.isFollowing{background:#e9f5e9;color:#226d36;border-color:#a7d5ae}
+@media(max-width:720px){.mesaSocialAuth{grid-template-columns:1fr}.mesaSocialHero{padding:55px 20px 36px}.mesaSocialAuthIntro{min-height:0;padding:32px}.mesaSocialAuthForm{padding:27px}.mesaSocialPanel{margin:0 15px 70px;padding:20px}.mesaSocialPanelHeading{align-items:flex-start;flex-direction:column}.mesaSocialFooter{flex-direction:column}.mesaSocialHeader nav{gap:10px}.mesaSocialHeader nav a{font-size:11px}}
