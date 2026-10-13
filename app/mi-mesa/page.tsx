@@ -1,5 +1,5 @@
 "use client";
-import {useEffect,useMemo,useState} from "react";
+import {useEffect,useMemo,useState,useRef} from "react";
 import type {FormEvent} from "react";
 import {createClient} from "@supabase/supabase-js";
 import Link from "next/link";
@@ -97,4 +97,12 @@ export default function MiMesa(){
   </form></div>}
   <footer className="mesaSocialFooter"><Link href="/explorar"><ArrowLeft size={16}/> Volver a Explorar MESA</Link><span>MESA · Tu comunidad gastronómica.</span></footer>
  </main>
+}
+function MesaCamera({mode,onClose,onCapture}:{mode:"photo"|"video";onClose:()=>void;onCapture:(file:File)=>void}){
+ const videoRef=useRef<HTMLVideoElement|null>(null),streamRef=useRef<MediaStream|null>(null),recorderRef=useRef<MediaRecorder|null>(null),chunksRef=useRef<Blob[]>([]);
+ const [error,setError]=useState(""),[recording,setRecording]=useState(false);
+ useEffect(()=>{let cancelled=false;async function start(){try{if(!navigator.mediaDevices?.getUserMedia)throw new Error("Este navegador no permite abrir la cámara. Probá desde un teléfono con HTTPS.");const stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:"environment"},audio:mode==="video"});if(cancelled){stream.getTracks().forEach(t=>t.stop());return}streamRef.current=stream;if(videoRef.current){videoRef.current.srcObject=stream;await videoRef.current.play().catch(()=>{})}}catch(e:any){if(!cancelled)setError(e?.message||"No se pudo abrir la cámara. Revisá los permisos del navegador.")}}start();return()=>{cancelled=true;if(recorderRef.current?.state==="recording")recorderRef.current.stop();streamRef.current?.getTracks().forEach(t=>t.stop())}},[mode]);
+ function photo(){const v=videoRef.current;if(!v||!v.videoWidth)return;const canvas=document.createElement("canvas");canvas.width=v.videoWidth;canvas.height=v.videoHeight;canvas.getContext("2d")?.drawImage(v,0,0);canvas.toBlob(blob=>{if(blob)onCapture(new File([blob],"mesa-foto-"+Date.now()+".jpg",{type:"image/jpeg"}))},"image/jpeg",.9)}
+ function toggleRecord(){if(recording){recorderRef.current?.stop();setRecording(false);return}const stream=streamRef.current;if(!stream||typeof MediaRecorder==="undefined"){setError("La grabación no está disponible en este navegador.");return}const mime=["video/webm;codecs=vp8,opus","video/webm","video/mp4"].find(t=>MediaRecorder.isTypeSupported(t))||"";const recorder=new MediaRecorder(stream,mime?{mimeType:mime}:undefined);chunksRef.current=[];recorder.ondataavailable=e=>{if(e.data.size)chunksRef.current.push(e.data)};recorder.onstop=()=>{if(!chunksRef.current.length)return;const type=recorder.mimeType||"video/webm";const blob=new Blob(chunksRef.current,{type});onCapture(new File([blob],"mesa-video-"+Date.now()+(type.includes("mp4")?".mp4":".webm"),{type}))};recorderRef.current=recorder;recorder.start();setRecording(true)}
+ return <div className="mesaCameraOverlay" role="dialog" aria-modal="true" aria-label={mode==="photo"?"Tomar foto":"Grabar video"}><div className="mesaCameraPanel"><div className="mesaCameraHead"><strong>{mode==="photo"?"Sacar foto":"Grabar video"}</strong><button onClick={onClose} aria-label="Cerrar cámara"><X size={22}/></button></div><video ref={videoRef} autoPlay playsInline muted className="mesaCameraVideo"/>{error&&<p role="alert">{error}</p>}<div className="mesaCameraActions"><button type="button" onClick={onClose}>Cancelar</button><button type="button" disabled={!!error} onClick={mode==="photo"?photo:toggleRecord}>{mode==="photo"?<Camera size={20}/>:<Video size={20}/>} {mode==="photo"?"Capturar foto":recording?"Detener grabación":"Empezar a grabar"}</button></div></div></div>
 }
