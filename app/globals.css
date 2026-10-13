@@ -1371,3 +1371,25 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
 @keyframes mesaClubPhraseIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:760px){.mesaNetworkSidebarBottom{display:flex!important;flex:none!important;min-width:135px!important;margin-top:0!important;padding:8px 10px!important;border-top:0!important;border-radius:12px!important;background:#fff!important}.mesaNetworkSidebarBottom small{max-width:95px}}
 @media(prefers-reduced-motion:reduce){.mesaClubPhrase{animation:none!important}}
+
+
+/* Explorar MESA: responsive navigation, with dedicated mobile layout */
+.directoryHeader{box-sizing:border-box;gap:20px}
+.directoryHeader nav{display:flex;align-items:center;justify-content:flex-end;flex-wrap:nowrap;gap:10px;min-width:0}
+.directoryHeader nav a{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:9px 13px;border-radius:11px;white-space:nowrap;line-height:1.15;text-align:center;text-decoration:none;transition:background .18s ease}
+.directoryHeader nav a:hover{background:#f2e9dd}
+.directoryHeader nav .directoryNavClub{background:#171310;color:#fff;font-weight:850}
+.directoryHeader nav .directoryNavClub:hover{background:#3a2a1d}
+@media(max-width:700px){
+ .directoryHeader{height:auto;min-height:72px;padding:12px 16px;display:grid;grid-template-columns:1fr;justify-items:center;gap:10px}
+ .directoryHeader .directoryBrand{justify-content:center}
+ .directoryHeader .directoryBrandLogo{height:34px}
+ .directoryHeader nav{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;font-size:11px}
+ .directoryHeader nav a{white-space:normal;overflow-wrap:break-word;min-width:0;min-height:43px;padding:8px 5px;border:1px solid #e8dccc;background:#fff;font-size:11px;font-weight:800}
+ .directoryHeader nav .directoryNavClub{border-color:#171310}
+}
+@media(max-width:360px){
+ .directoryHeader{padding:10px 11px}
+ .directoryHeader nav{gap:5px}
+ .directoryHeader nav a{font-size:10px;padding:7px 3px}
+}
