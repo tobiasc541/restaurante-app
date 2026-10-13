@@ -1170,3 +1170,13 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
 .mesaSectorMenu button:hover,.mesaSectorMenu button:focus-visible { background:#fff0d1;outline:none; }
 .mesaSectorMenuIcon { width:21px;height:21px;display:inline-flex;align-items:center;justify-content:center;flex:none; }
 .mesaSectorMenuIcon svg { width:17px;height:17px; }
+
+/* Keep editor actions above the footer hint and away from mapped objects. */
+.newPlan.isEditing .addFloorObject { left:50%;right:auto;bottom:53px;transform:translateX(-50%);z-index:35; }
+.newPlan.isEditing .mesaSectorMenu { bottom:calc(100% + 8px);left:50%;right:auto;transform:translateX(-50%); }
+.newPlan.isEditing .editHint { bottom:12px;white-space:nowrap; }
+/* The waiter uses the same desktop coordinate canvas, without squeezing table/sector sizes. */
+.floorPlanViewportCompact .newPlan { width:1000px;min-width:1000px;max-width:none; }
+.salonExperience.compact .floorPlanViewportCompact .newPlan .floorTableV2 { width:116px;max-width:none; }
+.salonExperience.compact .floorPlanViewportCompact .newPlan .floorObject:has(> .mesaSectorIdentity) { font-size:inherit; }
+.floorPlanViewportCompact { overflow-x:auto;overflow-y:hidden; }
