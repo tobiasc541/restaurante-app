@@ -1238,3 +1238,8 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
 .directoryFilters .mesaDirectorySwitchRow:has(.mesaMetalToggle)>span:first-child{grid-column:1;min-width:0}
 .directoryFilters .mesaDirectorySwitchRow:has(.mesaMetalToggle)>.mesaMetalToggle{grid-column:2}
 .directoryFilters .mesaSunMoon{width:42px;min-width:42px}
+
+/* Automatic open-now indicator: no secondary switch or clickable control. */
+.directoryFilters .mesaDirectorySwitchRow.mesaDirectoryAutoOpen{grid-template-columns:minmax(0,1fr) 42px;column-gap:8px}
+.directoryFilters .mesaDirectoryAutoOpen>span:first-child{grid-column:1;min-width:0}
+.directoryFilters .mesaDirectoryAutoOpen>.mesaSunMoon{grid-column:2;justify-self:end;pointer-events:none;cursor:default}
