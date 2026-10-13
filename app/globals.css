@@ -1226,3 +1226,15 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
 .mesaDirectoryCalendarGrid button.chosen,.mesaDirectoryTimeGrid button.chosen{background:#19130e;color:#fff}
 .mesaDirectoryTimeGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
 .mesaDirectoryTimeGrid button{padding:7px 2px;border:1px solid #eee0d0;border-radius:7px;background:#fffaf4;font-size:11px;cursor:pointer}
+
+/* Directory finishing pass: fixed, responsive switch alignment and shared MESA brand. */
+.directoryHeader .directoryBrand{display:inline-flex;align-items:center;min-width:0;line-height:1}
+.directoryHeader .directoryBrandLogo{display:block;width:auto;height:38px;max-width:145px;object-fit:contain}
+.directoryFilters .mesaDirectorySwitches{display:grid;grid-template-columns:minmax(0,1fr);gap:13px;width:100%;min-width:0;padding:12px 0}
+.directoryFilters .mesaDirectorySwitchRow{display:grid;grid-template-columns:42px minmax(0,1fr) 42px;align-items:center;column-gap:7px;width:100%;min-width:0;box-sizing:border-box;font-size:11px;line-height:1.2}
+.directoryFilters .mesaDirectorySwitchRow>span:nth-child(2){min-width:0;overflow-wrap:normal;word-break:normal}
+.directoryFilters .mesaDirectorySwitchRow>.mesaMiniToggle,.directoryFilters .mesaDirectorySwitchRow>.mesaMetalToggle{width:42px;min-width:42px;max-width:42px;justify-self:end}
+.directoryFilters .mesaDirectorySwitchRow:has(.mesaMetalToggle){grid-template-columns:minmax(0,1fr) 42px}
+.directoryFilters .mesaDirectorySwitchRow:has(.mesaMetalToggle)>span:first-child{grid-column:1;min-width:0}
+.directoryFilters .mesaDirectorySwitchRow:has(.mesaMetalToggle)>.mesaMetalToggle{grid-column:2}
+.directoryFilters .mesaSunMoon{width:42px;min-width:42px}
