@@ -1180,3 +1180,14 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
 .salonExperience.compact .floorPlanViewportCompact .newPlan .floorTableV2 { width:116px;max-width:none; }
 .salonExperience.compact .floorPlanViewportCompact .newPlan .floorObject:has(> .mesaSectorIdentity) { font-size:inherit; }
 .floorPlanViewportCompact { overflow-x:auto;overflow-y:hidden; }
+
+/* Public booking: same spatial coordinates as the operational salon, with horizontal navigation. */
+.mesaBookingStepAlert{margin:12px 0 15px;padding:12px 14px;border:1px solid #f0b7b7;border-left:4px solid #ce3333;border-radius:12px;background:#fff0f0;color:#9d1c1c;font-size:13px;font-weight:800;line-height:1.5}
+.mesaBookingMapScroll{width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;border-radius:16px;overscroll-behavior-x:contain;scrollbar-width:thin;margin:10px 0 18px}
+.mesaBookingMap.mesaBookingMapAccurate{box-sizing:border-box;display:block;position:relative;width:760px;min-width:760px;max-width:none;height:325px;min-height:325px;padding:0;background-color:#fffaf3;background-image:radial-gradient(#dec7ad 0.8px,transparent 0.8px);background-size:13px 13px;border:1px solid #bca88f;border-radius:16px}
+.mesaBookingMap.mesaBookingMapAccurate button{position:absolute;z-index:2;transform:translate(-50%,-50%);min-width:80px;min-height:46px;padding:7px 9px;font-size:12px;border-radius:12px;box-shadow:0 2px 7px #28180d1c}
+.mesaBookingMap.mesaBookingMapAccurate button small{font-size:9px;margin-top:3px}
+.mesaBookingMap.mesaBookingMapAccurate .mesaSalonObject{z-index:1;min-width:0;max-width:170px;padding:6px 9px;font-size:10px;white-space:nowrap;background:#fff9ed}
+.mesaBookingDateStage{margin-top:12px}
+.mesaBookingDateStage .mesaDateTrigger:disabled{cursor:not-allowed;opacity:.6}
+@media(max-width:540px){.mesaBookingMap.mesaBookingMapAccurate{width:760px;min-width:760px}.mesaBookingMapScroll{margin-bottom:14px}}
