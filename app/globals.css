@@ -1143,3 +1143,12 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
 .salonExperience .newPlan .floorObject > span:first-child { position: static; display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; margin: 0; line-height: 1; }
 .salonExperience .newPlan .floorObject > span:last-child { position: static; flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .salonExperience.compact .newPlan .floorObject { max-width: 110px; padding: 4px 6px; gap: 3px; font-size: 9px; }
+
+/* A waiter navigates the same floor-plan coordinates as the owner. Never compress labels. */
+.floorPlanViewport { min-width: 0; width: 100%; }
+.floorPlanViewportCompact { overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; touch-action: pan-x; border-radius: 18px; scrollbar-width: thin; scrollbar-color: #e6a000 transparent; }
+.floorPlanViewportCompact .newPlan { width: 720px; min-width: 720px; max-width: none; box-sizing: border-box; }
+.salonExperience.compact .floorPlanViewportCompact .newPlan .floorObject { width: max-content; max-width: 170px; padding: 6px 9px; font-size: 11px; gap: 6px; white-space: nowrap; }
+.salonExperience.compact .floorPlanViewportCompact .newPlan .floorObject > span:last-child { max-width: 130px; font-size: 11px; }
+.salonExperience.compact .floorPlanViewportCompact .newPlan .floorObject svg { width: 16px; height: 16px; }
+.salonExperience.compact .floorPlanViewportCompact .newPlan .floorTableV2 { width: 100px; max-width: none; }
