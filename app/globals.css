@@ -1160,3 +1160,13 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
 .salonExperience .newPlan .floorObject .mesaSectorIdentityName { display: inline-block; flex: none; width: auto; min-width: max-content; max-width: none; overflow: visible; text-overflow: clip; white-space: nowrap; color: #241b12; font-size: 11px; line-height: 17px; font-weight: 850; letter-spacing: .02em; text-transform: uppercase; }
 .salonExperience.compact .floorPlanViewportCompact .newPlan .floorObject:has(> .mesaSectorIdentity) { max-width: none; min-width: max-content; padding: 0; }
 .salonExperience.compact .floorPlanViewportCompact .newPlan .floorObject .mesaSectorIdentity { max-width: none; min-width: max-content; }
+
+/* Integrated floor-plan sector picker (replaces the browser-native select). */
+.newPlan .addFloorObject { overflow: visible; }
+.mesaSectorMenuTrigger { display:inline-flex;align-items:center;gap:9px;border:1px solid #e3d7c9;background:#fff;color:#171311;border-radius:999px;padding:9px 12px;font-size:11px;font-weight:850;cursor:pointer;white-space:nowrap; }
+.mesaSectorMenuTrigger:hover,.mesaSectorMenuTrigger[aria-expanded="true"] { background:#fff1d7;border-color:#eda500; }
+.mesaSectorMenu { position:absolute;bottom:calc(100% + 9px);right:0;z-index:100;min-width:195px;max-height:330px;overflow-y:auto;padding:7px;background:#fff;border:1px solid #eadbca;border-radius:15px;box-shadow:0 14px 45px #24180d33;display:flex;flex-direction:column;gap:2px; }
+.mesaSectorMenu button { display:flex;align-items:center;gap:10px;width:100%;border:0;background:transparent;color:#171311;padding:10px 11px;border-radius:9px;text-align:left;font-size:12px;font-weight:750;cursor:pointer; }
+.mesaSectorMenu button:hover,.mesaSectorMenu button:focus-visible { background:#fff0d1;outline:none; }
+.mesaSectorMenuIcon { width:21px;height:21px;display:inline-flex;align-items:center;justify-content:center;flex:none; }
+.mesaSectorMenuIcon svg { width:17px;height:17px; }
