@@ -1,25 +1,43 @@
-/* MESA food pattern: decorative wallpaper behind page content, never above text or controls. */
-:root { --mesa-food-pattern:url("/mesa-food-pattern.svg"); }
-html { background:#f7f1eb; }
-body { background-color:#f7f1eb; }
-/* The old fixed body::after overlay covered text, cards, menus and forms. */
-body::after { content:none !important; }
-/* A small, quiet repeating pattern on the outer page canvas. */
-body {
- background-image:linear-gradient(#f7f1ebbb,#f7f1ebbb),var(--mesa-food-pattern);
- background-repeat:repeat;
- background-size:auto,220px 165px;
+/* Global MESA food wallpaper: small illustrations on every page, behind content. */
+:root { --mesa-food-pattern:url("/mesa-food-pattern.svg"); --mesa-food-wash:rgba(247,241,235,.77); }
+html,body { min-height:100%; background-color:#f7f1eb; }
+body::after { content:none!important; }
+/* Backgrounds belong to each page surface, never to an overlay above the interface. */
+body,
+body > main,
+body > div > main,
+body > div > div > main,
+.directory,
+.directoryHero,
+.ownerPublic,
+.mesaSocialPage,
+.mesaSocialHero,
+.hero,
+main.mesaBooking,
+main.mesaPublicPage {
+ background-image:linear-gradient(var(--mesa-food-wash),var(--mesa-food-wash)),var(--mesa-food-pattern)!important;
+ background-repeat:repeat,repeat!important;
+ background-size:auto,185px 139px!important;
+ background-position:0 0,center top!important;
 }
-/* Keep the artwork behind all real page content, including opaque page canvases. */
-body > main, body > div > main, .mesaSocialPage, .directory, .directoryPage {
- background-image:linear-gradient(#f7f1ebbd,#f7f1ebbd),var(--mesa-food-pattern);
- background-repeat:repeat;
- background-size:auto,220px 165px;
+/* The hero formerly painted a solid radial background over the wallpaper. */
+.directoryHero {
+ background-color:transparent!important;
+ background-image:radial-gradient(ellipse at top,rgba(255,248,235,.78),rgba(247,241,235,.15) 72%),linear-gradient(var(--mesa-food-wash),var(--mesa-food-wash)),var(--mesa-food-pattern)!important;
+ background-repeat:no-repeat,repeat,repeat!important;
+ background-size:100% 100%,auto,185px 139px!important;
 }
-/* Components, panels and text stay on their own opaque surfaces. */
-@media(max-width:700px) {
- body,body > main,body > div > main,.mesaSocialPage,.directory,.directoryPage {
-  background-size:auto,180px 135px;
- }
+/* All controls, cards, inputs and navigation retain their own readable surfaces. */
+.directoryFilters,.directoryMap,.directoryCard,.ownerPublicPanel,
+.mesaSocialAuthIntro,.mesaSocialAuthForm,
+input,textarea,select { background-clip:padding-box; }
+@media(max-width:700px){
+ body,body > main,body > div > main,body > div > div > main,.directory,.directoryHero,.ownerPublic,.mesaSocialPage,.mesaSocialHero,.hero,main.mesaBooking,main.mesaPublicPage { background-size:auto,150px 113px!important; }
+ .directoryHero { background-size:100% 100%,auto,150px 113px!important; }
 }
-@media print {body,body > main,body > div > main,.mesaSocialPage,.directory,.directoryPage{background-image:none!important}}
+.directoryOpenStatus{font-size:11px;font-weight:850;line-height:1.45;border-radius:8px;padding:7px 9px;margin:8px 0;display:block;}
+.directoryOpenStatus.isOpen{color:#176b37;background:#e7f6e8;border:1px solid #bce6c4;}
+.directoryOpenStatus.isClosed{color:#a52420;background:#fff0ee;border:1px solid #f3c4be;}
+.mesaSunMoon{cursor:pointer;border:0;display:flex;align-items:center;justify-content:center;padding:2px;}
+.mesaSunMoon:focus-visible{outline:3px solid #a46a00;outline-offset:3px;}
+@media print {body,body > main,body > div > main,body > div > div > main,.directory,.directoryHero,.ownerPublic,.mesaSocialPage,.mesaSocialHero,.hero,main.mesaBooking,main.mesaPublicPage{background-image:none!important}}
