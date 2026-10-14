@@ -241,3 +241,26 @@ footer:not(.darkFooter) {
 .mesaPhonePostFooter{display:flex;align-items:center;gap:10px;padding:12px 8px;font-size:9px}.mesaPhonePostFooter button{background:none;border:0;padding:0;font-size:9px;font-weight:750;color:#21150e}.mesaPhonePostFooter button.liked{color:#d51e37}.mesaPhonePostFooter small{margin-left:auto;font-size:8px;color:#817368}
 .mesaPhoneBottom{height:56px;flex-shrink:0;border-top:1px solid #e9dfd5;background:#fffaf5;display:flex;justify-content:space-around;align-items:center}.mesaPhoneBottom button{border:0;background:none;width:38px;height:38px;border-radius:11px;font-size:25px;color:#15100e;display:grid;place-items:center}.mesaPhoneBottom button.active{background:#ffe8c9;color:#a95b00}.mesaPhoneProfileButton img{width:27px;height:27px;border-radius:50%;object-fit:cover}.mesaPhoneInfo{background:white;border-radius:10px;padding:22px 12px;font-weight:750}.mesaPhoneStoryOverlay{position:absolute;inset:40px 0 56px;background:#160e0a;color:white;z-index:8;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px}.mesaPhoneStoryOverlay>button{position:absolute;top:12px;right:16px;border:0;background:none;color:white;font-size:27px}.mesaPhoneStoryOverlay strong{font-size:22px}
 @media(max-width:600px){.mesaClubPhone{height:650px!important;width:min(100%,335px)!important}.mesaPhoneFoodPhoto{height:140px}}
+
+
+/* MESA Club refinements */
+.mesaPhoneBrand .mesaPhoneLogo{display:block;width:66px;height:30px;object-fit:contain}
+.mesaPhoneBrand b{font-size:13px}.mesaPhoneBrand em{font-weight:900}
+.mesaPhoneStoryOverlay{inset:0 0 0!important;background:#140d0b!important;display:block!important;overflow:hidden}
+.mesaPhoneStoryPhoto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mesaPhoneStoryOverlay:after{content:"";position:absolute;inset:0 0 auto;height:105px;background:linear-gradient(#0009,transparent);pointer-events:none}
+.mesaPhoneStoryProgress{position:absolute;z-index:2;top:43px;left:12px;right:12px;display:flex;gap:4px}
+.mesaPhoneStoryProgress span{height:3px;flex:1;background:#ffffff60;border-radius:5px}
+.mesaPhoneStoryProgress span.seen{background:#fff}
+.mesaPhoneStoryIdentity{position:absolute;top:55px;left:13px;right:12px;z-index:3;display:flex;justify-content:space-between;align-items:center;color:white}
+.mesaPhoneStoryIdentity b{font-size:14px;text-shadow:0 1px 4px #000}
+.mesaPhoneStoryIdentity button{border:0;background:#0004;color:#fff;font-size:27px;width:34px;height:34px;border-radius:50%;cursor:pointer}
+.mesaPhoneStoryBack,.mesaPhoneStoryNext{position:absolute;top:100px;bottom:0;width:50%;border:0;background:transparent;z-index:2;cursor:pointer}
+.mesaPhoneStoryBack{left:0}.mesaPhoneStoryNext{right:0}
+.reviews.section{background:#080808!important;color:#fff!important;border-radius:30px!important;padding:65px clamp(25px,6vw,100px)!important;box-shadow:none!important}
+.reviews.section h2,.reviews.section .lead{color:#fff!important}
+.reviews.section .lead{opacity:.85}
+.reviews.section .reviewCard{background:#fff!important;color:#16110d!important}
+.reviews.section .reviewCard p,.reviews.section .reviewCard b{color:#16110d!important}
+.reviews.section .reviewCard small{color:#6b625b!important}
+@media(max-width:700px){.reviews.section{border-radius:22px!important;padding:40px 22px!important}}
