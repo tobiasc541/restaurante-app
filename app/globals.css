@@ -1421,3 +1421,38 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
 @keyframes mesaClubPulse{50%{box-shadow:0 0 0 8px #f5e4c980}}
 @media(max-width:700px){.mesaSocialHero{padding:43px 18px 30px}.mesaSocialHero .mesaClubAnimatedHeadline{font-size:clamp(32px,8vw,49px);min-height:3.25em}.mesaClubHeroLabel{font-size:9px;letter-spacing:.06em}.mesaClubHeroChips{gap:6px}.mesaClubHeroChips span{font-size:10px;padding:7px 9px}.mesaSocialAuthIntro{min-height:0}}
 @media(prefers-reduced-motion:reduce){.mesaClubHeadlinePhrase,.mesaClubLiveDot,.mesaSocialHero:before,.mesaSocialHero:after{animation:none!important}.mesaClubHeadlinePhrase{filter:none}}
+
+
+/* MESA Club poster: adapted from the supplied interactive doodle card */
+.mesaClubEdition{font-size:10px;font-weight:900;letter-spacing:.22em;color:#99621e;margin:12px auto 0}
+.mesaClubDoodle{margin:26px auto 0;max-width:330px;font-family:Georgia,serif}
+.mesaClubDoodleCheck{position:absolute;opacity:0;width:1px;height:1px}
+.mesaClubDoodleStage{--mp:#fff8e8;--mi:#18120d;--ma:#c98025;--ms:#14100c;position:relative;min-height:300px;padding:32px 12px 8px;display:flex;align-items:center;justify-content:center;border-radius:20px;background:radial-gradient(circle at 15% 20%,#d99b3540,transparent 40%),radial-gradient(circle at 85% 75%,#e0b56b30,transparent 40%);transition:background .4s}
+.mesaClubDoodleToggle{position:absolute;right:5px;top:0;z-index:12;cursor:pointer;font:900 9px monospace;letter-spacing:.07em;padding:8px 11px;background:var(--mp);color:var(--mi);border:2px solid var(--mi);border-radius:99px;box-shadow:3px 3px 0 var(--ma);transform:rotate(2deg);transition:transform .2s}
+.mesaClubDoodleToggle:hover{transform:translateY(-3px) rotate(-2deg)}
+.mesaClubDoodleCheck:focus-visible~.mesaClubDoodleStage .mesaClubDoodleToggle{outline:3px solid #e2a646;outline-offset:3px}
+.mesaClubDoodlePoster{position:relative;width:min(100%,260px);height:265px;overflow:hidden;background:var(--mp);color:var(--mi);border:3px solid var(--mi);border-radius:13px;box-shadow:9px 9px 0 var(--ms);transform:rotate(-2deg);transition:transform .45s,background .45s,box-shadow .45s}
+.mesaClubDoodlePoster:hover{transform:rotate(1deg) translate(-3px,-3px);box-shadow:13px 13px 0 var(--ms)}
+.mesaClubDoodlePoster:before{content:"";position:absolute;inset:10px;border:2px dashed #9d865f70;border-radius:8px;pointer-events:none;z-index:2}
+.mesaClubDoodleGrain,.mesaClubDoodleGrid{position:absolute;inset:0;pointer-events:none}
+.mesaClubDoodleGrain{background-image:radial-gradient(var(--mi) .65px,transparent .8px);background-size:8px 8px;opacity:.1;animation:mesaDoodleGrain 7s steps(5) infinite}
+.mesaClubDoodleGrid{background-image:linear-gradient(to right,#987f5a20 1px,transparent 1px),linear-gradient(to bottom,#987f5a20 1px,transparent 1px);background-size:30px 30px}
+.mesaClubDoodleTape{position:absolute;top:7px;width:47px;height:18px;background:#dfaa5caa;border:1px solid #493019;z-index:4}.mesaClubDoodleTapeLeft{left:-9px;transform:rotate(-20deg)}.mesaClubDoodleTapeRight{right:-9px;transform:rotate(20deg)}
+.mesaClubDoodleTag{position:absolute;top:29px;left:23px;z-index:3;background:var(--mi);color:var(--mp);font:900 9px monospace;letter-spacing:.1em;padding:8px 10px;border-radius:20px 20px 20px 4px;box-shadow:3px 3px 0 var(--ma)}
+.mesaClubDoodleTitle{position:absolute;top:77px;left:22px;z-index:3;font:950 54px/.85 Impact,"Arial Black",sans-serif;letter-spacing:-2px;text-align:left}
+.mesaClubDoodleTitle span{display:block}.mesaClubDoodleTitle span+span{color:transparent;-webkit-text-stroke:1.5px var(--mi)}
+.mesaClubDoodleUnderline{position:absolute;top:173px;left:26px;width:125px;height:14px;border-bottom:4px solid var(--ma);border-radius:50%;transform:rotate(-4deg)}
+.mesaClubDoodleStar{position:absolute;right:20px;top:73px;font-size:43px;color:var(--ma);animation:mesaDoodleStar 4s ease-in-out infinite}
+.mesaClubDoodleRibbon{position:absolute;top:178px;left:-32px;width:320px;overflow:hidden;transform:rotate(-9deg);background:var(--ma);border-top:2px solid var(--mi);border-bottom:2px solid var(--mi);color:var(--mp);padding:7px 0;z-index:4;box-shadow:0 5px 0 #1c130b30}
+.mesaClubDoodleTrack{display:flex;width:max-content;white-space:nowrap;animation:mesaDoodleMarquee 11s linear infinite;font:900 10px monospace;letter-spacing:.06em}.mesaClubDoodleTrack span{padding-right:15px}
+.mesaClubDoodleBottom{position:absolute;left:22px;right:22px;bottom:16px;display:flex;align-items:end;justify-content:space-between;gap:10px;border-top:2px solid var(--mi);padding-top:10px}
+.mesaClubDoodleBarcode{width:54px;height:26px;background:repeating-linear-gradient(to right,var(--mi) 0 2px,transparent 2px 4px,var(--mi) 4px 7px,transparent 7px 10px)}
+.mesaClubDoodleBottom>span:last-child{display:grid;text-align:right;gap:2px}.mesaClubDoodleBottom b{font:900 9px monospace}.mesaClubDoodleBottom small{font:10px/1.2 Georgia,serif;max-width:115px}
+.mesaClubDoodleCheck:checked~.mesaClubDoodleStage{--mp:#15110e;--mi:#f8e9ca;--ma:#e5ad44;--ms:#a96c24;background:radial-gradient(circle at 20% 30%,#ba7c3130,transparent 40%),#1b140e}
+.mesaClubDoodleCheck:checked~.mesaClubDoodleStage .mesaClubDoodlePoster{background:linear-gradient(135deg,#15110e,#2c1b11)}
+.mesaClubDoodleCheck:checked~.mesaClubDoodleStage .mesaClubDoodleTitle{text-shadow:2px 2px 0 #9d601b}
+@keyframes mesaDoodleMarquee{to{transform:translateX(-33.333%)}}
+@keyframes mesaDoodleGrain{to{background-position:14px 7px}}
+@keyframes mesaDoodleStar{50%{transform:translateY(-8px) rotate(12deg)}}
+@media(max-width:700px){.mesaClubDoodle{max-width:310px}.mesaClubEdition{font-size:9px;letter-spacing:.13em}.mesaClubDoodleStage{min-height:292px}.mesaSocialAuthIntro{padding-bottom:30px}}
+@media(prefers-reduced-motion:reduce){.mesaClubDoodleTrack,.mesaClubDoodleGrain,.mesaClubDoodleStar{animation:none}}
