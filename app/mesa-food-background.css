@@ -1,5 +1,5 @@
 /* Global MESA food wallpaper: small illustrations on every page, behind content. */
-:root { --mesa-food-pattern:url("/mesa-food-pattern.svg"); --mesa-food-wash:rgba(247,241,235,.77); }
+:root { --mesa-food-pattern:url("/mesa-food-pattern.svg"); --mesa-food-wash:rgba(247,241,235,.65); }
 html,body { min-height:100%; background-color:#f7f1eb; }
 body::after { content:none!important; }
 /* Backgrounds belong to each page surface, never to an overlay above the interface. */
@@ -41,3 +41,44 @@ input,textarea,select { background-clip:padding-box; }
 .mesaSunMoon{cursor:pointer;border:0;display:flex;align-items:center;justify-content:center;padding:2px;}
 .mesaSunMoon:focus-visible{outline:3px solid #a46a00;outline-offset:3px;}
 @media print {body,body > main,body > div > main,body > div > div > main,.directory,.directoryHero,.ownerPublic,.mesaSocialPage,.mesaSocialHero,.hero,main.mesaBooking,main.mesaPublicPage{background-image:none!important}}
+
+/* 2026-10-14: Fill the actual owner dashboard and the previously plain landing/login sections.
+   Pattern is painted on each surface, never as a fixed overlay above content. */
+.ownerApp,
+.ownerApp > .ownerContent,
+.ownerApp > .realAside,
+.ownerContent:not(.mesaOwnerSample),
+.waiterApp,
+.section:not(.darkSection),
+.split:not(.darkSection),
+.pricing:not(.darkSection),
+.mesaSocialAuth,
+.mesaSocialPage > main,
+.mesaSocialPage > section,
+.mesaSocialPage > div:not(.mesaSocialAuthIntro),
+footer:not(.darkFooter) {
+ background-color:#f7f1eb;
+ background-image:linear-gradient(var(--mesa-food-wash),var(--mesa-food-wash)),var(--mesa-food-pattern)!important;
+ background-repeat:repeat!important;
+ background-size:auto,185px 139px!important;
+ background-position:center top!important;
+}
+/* Preserve intentionally dark promotional areas and the white dashboard simulation. */
+.mesaLandingOwnerApp,
+.mesaLandingOwnerApp .ownerContent,
+.mesaLandingOwnerApp .realAside,
+.mesaSocialAuthIntro,
+.ownerMetrics article,
+.ownerPanel,
+.metric,
+.directoryCard,
+.directoryFilters,
+.directoryMap {
+ background-image:none!important;
+}
+@media(max-width:700px){
+ .ownerApp,.ownerApp > .ownerContent,.ownerApp > .realAside,.ownerContent:not(.mesaOwnerSample),.waiterApp,.section:not(.darkSection),.split:not(.darkSection),.pricing:not(.darkSection),.mesaSocialAuth,.mesaSocialPage > main,.mesaSocialPage > section,.mesaSocialPage > div:not(.mesaSocialAuthIntro),footer:not(.darkFooter) {background-size:auto,150px 113px!important;}
+}
+@media print{
+ .ownerApp,.ownerContent,.realAside,.waiterApp,.section,.split,.pricing,.mesaSocialAuth,footer{background-image:none!important;}
+}
