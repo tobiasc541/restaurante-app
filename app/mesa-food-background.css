@@ -140,3 +140,32 @@ footer:not(.darkFooter) {
 @media(max-width:800px){.mesaClubLanding{grid-template-columns:minmax(0,1fr);padding:60px 20px!important;gap:40px;}.mesaClubPhone{transform:none;}.mesaClubPhone:hover{transform:translateY(-4px);}}
 @media(max-width:700px){.mesaNotificationSection,.mesaExperienceV2,.mesaDiscover,.mesaClubLanding,.reviews.section,.pricing.section,.mesaLandingDemoSection,.mesaLandingDemoWrap{background-size:auto,150px 113px!important;}}
 @media(prefers-reduced-motion:reduce){.mesaClubPhone,.mesaClubLandingCta{transition:none!important;}}
+
+/* MESA Club phone uses the same feed interaction patterns as the social app, in a self-contained demo. */
+.mesaClubPreview button{font:inherit;cursor:pointer;}
+.mesaClubPreview .mesaClubPhoneStories button{appearance:none;border:0;background:none;padding:0;text-align:center;min-width:0;}
+.mesaClubPreview .mesaClubPhoneStories button span{transition:transform .2s ease,box-shadow .2s ease;}
+.mesaClubPreview .mesaClubPhoneStories button:hover span{transform:translateY(-3px);box-shadow:0 5px 13px #bd8e3a35;}
+.mesaClubPreviewTabs{display:flex;gap:6px;padding:3px 13px 8px;}
+.mesaClubPreviewTabs button{flex:1;background:#f3e8da;border:0;border-radius:9px;padding:8px 3px;font-size:10px;font-weight:900;color:#6c5440;}
+.mesaClubPreviewTabs button.active{background:#171311;color:white;}
+.mesaClubPreviewFollow{margin-left:auto;border:1px solid #e6c18d;background:#fff8ed;color:#885008;border-radius:12px;padding:7px 8px;font-size:9px!important;font-weight:900!important;white-space:nowrap;}
+.mesaClubPreview .mesaClubPhonePostActions{display:flex;gap:6px;align-items:center;justify-content:space-between;padding:8px;}
+.mesaClubPreview .mesaClubPhonePostActions button{background:none;border:0;font-size:10px;font-weight:800;color:#33251d;padding:5px 2px;}
+.mesaClubPreview .mesaClubPhonePostActions button[aria-pressed="true"]{color:#bb3030;}
+.mesaClubPreviewComment{display:flex;gap:5px;padding:4px 9px 10px;}
+.mesaClubPreviewComment input{min-width:0;flex:1;border:1px solid #e5d7c8;border-radius:8px;padding:8px;font-size:10px;background:white;color:#171311;}
+.mesaClubPreviewComment button{border:0;background:#171311;color:#fff;border-radius:8px;font-size:10px;font-weight:800;padding:6px;}
+.mesaClubPreviewComments{padding:0 12px 9px;max-height:60px;overflow:auto;}
+.mesaClubPreviewComments p{font-size:10px;margin:4px 0;overflow-wrap:anywhere;}
+.mesaClubPreviewNotice{display:block;padding:0 10px 10px;font-size:9px;color:#745b37;}
+.mesaClubPreview .mesaClubPhoneTabs{display:flex;justify-content:space-around;align-items:center;padding:9px;}
+.mesaClubPreview .mesaClubPhoneTabs button,.mesaClubPreview .mesaClubPhoneTabs a{background:none;border:0;color:#171311;font-size:21px;text-decoration:none;padding:0 9px;}
+.mesaClubPreviewStory{position:absolute;inset:6px;border-radius:32px;background:linear-gradient(145deg,#25140b,#c97916 75%,#f0b34e);z-index:4;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:22px;padding:24px;}
+.mesaClubPreviewStory>button:first-child{position:absolute;top:18px;right:17px;background:#ffffff2a;border:1px solid #ffffff6b;color:#fff;border-radius:50%;width:33px;height:33px;}
+.mesaClubPreviewStory small{letter-spacing:.13em;font-weight:900;font-size:10px;}
+.mesaClubPreviewStory strong{font-size:30px;line-height:1.1;}
+.mesaClubPreviewStory p{font-size:13px;line-height:1.6;color:#fff;}
+.mesaClubPreviewStory>button:last-child{border:0;border-radius:30px;background:#fff;color:#231309;padding:11px 19px;font-weight:900;}
+.mesaClubLandingCopy p{max-width:660px;}
+@media(prefers-reduced-motion:reduce){.mesaClubPreview .mesaClubPhoneStories button span{transition:none;}}
