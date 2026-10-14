@@ -82,3 +82,61 @@ footer:not(.darkFooter) {
 @media print{
  .ownerApp,.ownerContent,.realAside,.waiterApp,.section,.split,.pricing,.mesaSocialAuth,footer{background-image:none!important;}
 }
+
+/* Landing polish: no abrupt colored glow or blank separator stripes. */
+.hero .blob,.hero .accentBlob,.hero .green{display:none!important;}
+.mesaLandingFineDivider,.mesaLandingAnchor{height:0!important;min-height:0!important;margin:0!important;padding:0!important;border:0!important;background:none!important;}
+.mesaNotificationSection,.mesaExperienceV2,.mesaDiscover,.mesaClubLanding,.reviews.section,.pricing.section,.mesaLandingDemoSection,.mesaLandingDemoWrap{
+ background-color:#f7f1eb!important;
+ background-image:linear-gradient(var(--mesa-food-wash),var(--mesa-food-wash)),var(--mesa-food-pattern)!important;
+ background-repeat:repeat!important;
+ background-size:auto,185px 139px!important;
+ background-position:center top!important;
+}
+.reviews.section{color:#171311!important;position:relative;}
+.reviews.section h2,.reviews.section p,.reviews.section .lead{color:#171311!important;}
+.reviews.section .lead{color:#51463f!important;}
+.reviews.section .reviewCard{background:#fffdf9!important;color:#171311!important;}
+.reviews.section .reviewCard p{color:#171311!important;}
+/* Social preview: all content is readable, with subtle motion and no layout shifts. */
+.mesaClubLanding{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.85fr);align-items:center;gap:clamp(30px,6vw,110px);padding:90px max(6vw,24px)!important;overflow:hidden;color:#171311;}
+.mesaClubLandingCopy{max-width:660px;}
+.mesaClubLandingCopy .tag{color:#a86c12;}
+.mesaClubLandingCopy h2{font-size:clamp(34px,4.2vw,66px);line-height:1.06;letter-spacing:-.055em;margin:18px 0 22px;color:#171311;}
+.mesaClubLandingCopy h2 em{font-style:normal;color:#a76505;}
+.mesaClubLandingCopy p{font-size:clamp(15px,1.4vw,19px);line-height:1.7;color:#52473d;max-width:560px;}
+.mesaClubLandingPills{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0 32px;}
+.mesaClubLandingPills span{padding:9px 12px;background:#fffaf3;border:1px solid #e5d1b7;border-radius:100px;font-size:12px;font-weight:800;color:#4e3320;}
+.mesaClubLandingCta{display:inline-flex;padding:15px 24px;border-radius:100px;background:#171311;color:#fff!important;text-decoration:none;font-weight:900;box-shadow:4px 5px 0 #e8a022;transition:transform .2s ease,box-shadow .2s ease;}
+.mesaClubLandingCta:hover{transform:translateY(-3px);box-shadow:4px 8px 0 #e8a022;}
+.mesaClubPhoneWrap{display:flex;flex-direction:column;align-items:center;gap:12px;min-width:0;}
+.mesaClubPhone{width:min(100%,330px);border:9px solid #181615;border-radius:49px;padding:7px;background:#181615;box-shadow:0 25px 70px #25150d28,10px 13px 0 #e9a023;position:relative;transform:rotate(3deg);transition:transform .4s ease;}
+.mesaClubPhone:hover{transform:rotate(0) translateY(-6px);}
+.mesaClubPhoneIsland{width:88px;height:19px;background:#171311;border-radius:0 0 15px 15px;position:absolute;z-index:2;top:7px;left:50%;transform:translateX(-50%);}
+.mesaClubPhoneScreen{min-height:570px;border-radius:34px;overflow:hidden;background:#f9f2e9;display:flex;flex-direction:column;}
+.mesaClubPhoneHeader{padding:37px 18px 15px;display:flex;justify-content:space-between;align-items:center;background:#fffaf3;border-bottom:1px solid #e9d8c4;font-size:17px;}
+.mesaClubPhoneHeader b{font-weight:1000;letter-spacing:-.05em;}
+.mesaClubPhoneHeader b span{color:#a66509;}
+.mesaClubPhoneGreeting{padding:20px 17px 10px;}
+.mesaClubPhoneGreeting small{display:block;color:#a76505;font-size:9px;letter-spacing:.1em;font-weight:900;}
+.mesaClubPhoneGreeting strong{display:block;font-size:26px;letter-spacing:-.06em;line-height:1.08;margin:9px 0;}
+.mesaClubPhoneGreeting p{font-size:11px;color:#67594b;line-height:1.4;}
+.mesaClubPhoneStories{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;padding:13px 14px;}
+.mesaClubPhoneStories div{text-align:center;min-width:0;}
+.mesaClubPhoneStories span{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;border:2px solid #e8a022;background:#fff;box-shadow:0 2px 8px #bd8e3a20;margin:auto;font-size:25px;}
+.mesaClubPhoneStories small{font-size:10px;font-weight:800;display:block;margin-top:5px;}
+.mesaClubPhonePost{margin:8px 13px 14px;border:1px solid #ead8c2;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 4px 15px #49300f0b;}
+.mesaClubPhonePostAuthor{display:flex;align-items:center;gap:9px;padding:10px;}
+.mesaClubPhonePostAuthor>span{width:35px;height:35px;border-radius:50%;display:grid;place-items:center;background:#fff2d8;font-size:20px;}
+.mesaClubPhonePostAuthor b{display:block;font-size:10px;}
+.mesaClubPhonePostAuthor small{display:block;font-size:9px;color:#796f65;margin-top:2px;}
+.mesaClubPhonePostArt{height:130px;background:radial-gradient(circle at 80% 10%,#f4a523,#c36d13 65%,#5b2d10);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:white;gap:9px;}
+.mesaClubPhonePostArt span{font-size:9px;font-weight:900;letter-spacing:.18em;}
+.mesaClubPhonePostArt strong{font-size:21px;letter-spacing:-.04em;}
+.mesaClubPhonePostArt small{font-size:11px;}
+.mesaClubPhonePostActions{font-size:11px;font-weight:800;padding:12px;color:#33251d;}
+.mesaClubPhoneTabs{margin-top:auto;border-top:1px solid #e6d6c2;text-align:center;padding:12px;font-size:20px;letter-spacing:3px;background:#fffaf3;}
+.mesaClubPhoneCaption{font-size:11px;color:#6d6157;text-align:center;}
+@media(max-width:800px){.mesaClubLanding{grid-template-columns:minmax(0,1fr);padding:60px 20px!important;gap:40px;}.mesaClubPhone{transform:none;}.mesaClubPhone:hover{transform:translateY(-4px);}}
+@media(max-width:700px){.mesaNotificationSection,.mesaExperienceV2,.mesaDiscover,.mesaClubLanding,.reviews.section,.pricing.section,.mesaLandingDemoSection,.mesaLandingDemoWrap{background-size:auto,150px 113px!important;}}
+@media(prefers-reduced-motion:reduce){.mesaClubPhone,.mesaClubLandingCta{transition:none!important;}}
