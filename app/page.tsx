@@ -32,34 +32,33 @@ const DEMO_SEEDS:Record<string,DemoRecord[]>={
  "Tutoriales":[{id:1,name:"Primeros pasos",detail:"Configurar mesas y QR",status:"Disponible"},{id:2,name:"Gestión del salón",detail:"Mozos, pedidos y limpieza",status:"Disponible"}]
 };
 function MesaClubPhonePreview(){
- const [tab,setTab]=useState<"feed"|"offers"|"following">("feed");
  const [story,setStory]=useState<string|null>(null);
  const [liked,setLiked]=useState(false);
  const [search,setSearch]=useState("");
- const [following,setFollowing]=useState(true);
- const photo="/images/mesa-club-offer.jpg";
- const frame={background:"#fffaf5",color:"#18120e",height:"100%",minHeight:570,display:"flex",flexDirection:"column",fontSize:11,overflow:"hidden"} as const;
- return <div className="mesaClubActualPreview mesaClubLivePhone" style={frame}>
-  <div style={{padding:"14px 13px 9px",display:"flex",justifyContent:"space-between",alignItems:"center",borderBottom:"1px solid #eee1d5"}}><b style={{fontSize:17,color:"#16100b"}}>🍔 MESA <span style={{color:"#aa5100"}}>Club</span></b><span style={{fontSize:17}}>⌕　☰</span></div>
-  <div style={{padding:"12px 12px 6px"}}><small style={{fontSize:8,fontWeight:900,letterSpacing:1.3,color:"#9c4e00"}}>TU COMUNIDAD GASTRONÓMICA</small><h3 style={{fontSize:22,margin:"3px 0"}}>{tab==="feed"?"Para vos":tab==="offers"?"Ofertas para vos":"Siguiendo"}</h3><p style={{fontSize:10,margin:0}}>Novedades de los lugares que seguís.</p></div>
-  <div style={{display:"flex",gap:5,padding:"8px 11px"}}>{([["feed","Inicio"],["offers","Ofertas"],["following","Siguiendo"]] as const).map(([id,label])=><button key={id} onClick={()=>setTab(id)} style={{flex:1,padding:"8px 2px",border:0,borderRadius:8,fontWeight:800,fontSize:10,background:tab===id?"#111":"#f0e6db",color:tab===id?"white":"#362b22"}}>{label}</button>)}</div>
-  <div style={{overflowY:"auto",flex:1,minHeight:0,padding:"0 10px 12px"}}>
-   <div style={{background:"white",borderRadius:13,padding:10,marginBottom:9,border:"1px solid #eee4da"}}>
-    <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}><b>Historias</b><small style={{fontSize:8,color:"#806e62"}}>Desaparecen después de 24 horas</small></div>
-    <div style={{display:"flex",gap:16,marginTop:10}}>{[{name:"Tu historia",emoji:"👤"},{name:"hh",emoji:"🍽️"},{name:"El Dorado",emoji:"🌃"}].map((x,i)=><button key={x.name} onClick={()=>setStory(x.name)} style={{border:0,background:"transparent",padding:0,fontSize:9,fontWeight:700,display:"flex",flexDirection:"column",alignItems:"center",gap:5}}><span style={{border:"2px solid #d27a08",width:48,height:48,borderRadius:"50%",display:"grid",placeItems:"center",fontSize:23,background:i===2?"#161b24":"#fff0db"}}>{x.emoji}</span>{x.name}</button>)}</div>
-   </div>
-   <input aria-label="Buscar en MESA Club" placeholder="⌕  Buscar en tus restaurantes y publicaciones..." value={search} onChange={e=>setSearch(e.target.value)} style={{width:"100%",padding:"10px 9px",borderRadius:9,border:"1px solid #e9dacc",background:"white",fontSize:9,marginBottom:9}}/>
-   {(!search||"el dorado pollo al disco oferta".includes(search.toLowerCase()))&&<div style={{background:"white",borderRadius:13,overflow:"hidden",border:"1px solid #eee4da"}}>
-    <div style={{display:"flex",alignItems:"center",gap:8,padding:10}}><span style={{width:30,height:30,borderRadius:"50%",background:"#101b2b",color:"#ffac35",display:"grid",placeItems:"center"}}>✦</span><div style={{flex:1}}><b style={{fontSize:11}}>El Dorado</b><div style={{fontSize:8,color:"#85766c"}}>13 oct, 07:04 p. m. · Novedad</div></div><span style={{fontSize:9,fontWeight:900,color:"#167a3b",background:"#dcf8e4",padding:"5px 7px",borderRadius:5}}>OFERTA</span></div>
-    <div style={{background:"linear-gradient(135deg,#320000,#8d0505)",color:"white",padding:"16px 10px",textAlign:"center",margin:"0 7px",borderRadius:8}}><small style={{letterSpacing:1.3,fontSize:8}}>OFERTA EXCLUSIVA · POR TIEMPO LIMITADO</small><h4 style={{margin:"8px 0 12px",fontSize:13}}>¡Hoy es el día para darte una vuelta!</h4><div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:5}}>{[["02","DÍAS"],["00","HORAS"],["51","MIN"],["13","SEG"]].map(([v,l])=><div key={l} style={{background:"#670000",padding:"9px 2px",borderRadius:5}}><b style={{fontSize:20,display:"block"}}>{v}</b><small style={{fontSize:8}}>{l}</small></div>)}</div></div>
-    <b style={{display:"block",padding:"9px 9px",fontSize:11}}>pollo al disco - $100000 de descuento</b>
-    <div style={{height:130,background:"linear-gradient(130deg,#44301c,#a57535 55%,#e0b36a)",display:"grid",placeItems:"center",textAlign:"center",color:"white",fontWeight:900,fontSize:18}}>🍗<span style={{display:"block"}}>OFERTA GASTRONÓMICA</span></div>
-    <div style={{padding:10,display:"flex",gap:13,alignItems:"center",fontSize:10}}><button onClick={()=>setLiked(!liked)} style={{background:"none",border:0,color:liked?"#e42a35":"#8c4e29",fontWeight:800,padding:0}}>{liked?"♥":"♡"} Me gusta</button><button onClick={()=>{if(typeof navigator!=="undefined"&&navigator.share)navigator.share({title:"MESA Club",url:window.location.href}).catch(()=>{});else if(typeof navigator!=="undefined"&&navigator.clipboard)navigator.clipboard.writeText(window.location.href).catch(()=>{});}} style={{background:"none",border:0,padding:0,fontWeight:700}}>↗ Compartir</button><span style={{marginLeft:"auto",fontSize:8,color:"#88766b"}}>Restaurante que seguís</span></div>
-   </div>}
-   {tab==="following"&&<button onClick={()=>setFollowing(!following)} style={{marginTop:10,padding:9,width:"100%",borderRadius:9,border:"1px solid #e7d6c6",background:"#fff"}}>{following?"✓ Siguiendo a El Dorado":"Seguir a El Dorado"}</button>}
+ const [section,setSection]=useState<"home"|"search"|"create"|"likes"|"profile">("home");
+ const avatar=(name:string,photo:string,extra?:string)=><button type="button" className="mesaPhoneStory" onClick={()=>setStory(name)} key={name}><span className="mesaPhoneStoryCircle"><img src={photo} alt={name}/>{extra&&<i className={extra==="+"?"mesaPhonePlus":"mesaPhoneUnread"}>{extra==="+"?"+":""}</i>}</span><b>{name}</b></button>;
+ return <div className="mesaPhoneApp">
+  <div className="mesaPhoneStatus"><strong>9:41</strong><span>▮▮▮　◕　▰</span></div>
+  <div className="mesaPhoneAppHeader"><div className="mesaPhoneBrand"><span>🍔</span><b>MESA <em>Club</em></b></div><div className="mesaPhoneHeaderTools"><button aria-label="Buscar" onClick={()=>setSection("search")}>⌕</button><button aria-label="Menú" onClick={()=>setSection(section==="profile"?"home":"profile")}>☰</button></div></div>
+  <div className="mesaPhoneScroll">
+   <div className="mesaPhoneStories"><div className="mesaPhoneSectionHead"><b>Historias</b><small>Desaparecen después de 24 horas</small></div><div className="mesaPhoneStoryList">
+   {avatar("Tu historia","https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=160&h=160&fit=crop&crop=faces","+")}
+   {avatar("hh","https://images.unsplash.com/photo-1547592180-85f173990554?w=160&h=160&fit=crop",".")}
+   {avatar("El Dorado","https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=160&h=160&fit=crop")}
+   </div></div>
+   <label className="mesaPhoneSearch"><span>⌕</span><input value={search} onChange={e=>setSearch(e.target.value)} onFocus={()=>setSection("search")} placeholder="Buscar en tus restaurantes y publicaciones..." /></label>
+   {(section==="home"||section==="search"||section==="likes")&&(!search||"el dorado pollo al disco oferta".includes(search.toLowerCase()))&&<article className="mesaPhonePost">
+    <div className="mesaPhonePostHeader"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=100&h=100&fit=crop" alt="El Dorado"/><div><b>El Dorado</b><small>13 oct, 07:04 p. m. · Novedad</small></div><span>OFERTA</span><button aria-label="Más opciones">⋮</button></div>
+    <div className="mesaPhoneCountdown"><small>OFERTA EXCLUSIVA · POR TIEMPO LIMITADO</small><h4>¡Hoy es el día para dar una vuelta!</h4><div className="mesaPhoneTimeGrid">{[["02","DÍAS"],["00","HORAS"],["51","MIN"],["13","SEG"]].map(([number,label])=><div key={label}><strong>{number}</strong><small>{label}</small></div>)}</div></div>
+    <p className="mesaPhoneOfferTitle">pollo al disco - 15.000 pesos de descuento</p>
+    <img className="mesaPhoneFoodPhoto" src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=700&h=480&fit=crop" alt="Plato de pollo caliente servido con verduras" />
+    <div className="mesaPhonePostFooter"><button onClick={()=>setLiked(!liked)} className={liked?"liked":""}>{liked?"♥":"♡"} Me gusta</button><button onClick={()=>{if(typeof navigator!=="undefined"&&navigator.share)navigator.share({title:"Oferta de El Dorado en MESA Club",url:window.location.href}).catch(()=>{});else if(typeof navigator!=="undefined"&&navigator.clipboard)navigator.clipboard.writeText(window.location.href).catch(()=>{});}}>↗ Compartir</button><small>Restaurante que seguís</small></div>
+   </article>}
+   {section==="create"&&<div className="mesaPhoneInfo">Las publicaciones y ofertas las comparten los restaurantes en MESA Club.</div>}
+   {section==="profile"&&<div className="mesaPhoneInfo">Tu perfil de MESA Club</div>}
   </div>
-  <div style={{display:"flex",justifyContent:"space-around",alignItems:"center",background:"#fff",borderTop:"1px solid #eadfd2",padding:"10px 8px",fontSize:19}}><button onClick={()=>setTab("feed")} style={{border:0,background:"none"}}>⌂</button><button onClick={()=>setTab("offers")} style={{border:0,background:"none"}}>⌕</button><button onClick={()=>setTab("following")} style={{border:0,background:"none"}}>♡</button><span style={{fontSize:17}}>◉</span></div>
-  {story&&<div style={{position:"absolute",inset:0,background:"#18120e",color:"white",zIndex:5,padding:20,display:"flex",flexDirection:"column",justifyContent:"center",textAlign:"center"}}><button onClick={()=>setStory(null)} style={{position:"absolute",right:14,top:14,color:"white",background:"none",border:0,fontSize:22}}>×</button><b style={{fontSize:22}}>{story}</b><p>Historia de MESA Club</p></div>}
+  <nav className="mesaPhoneBottom" aria-label="Navegación de MESA Club"><button className={section==="home"?"active":""} onClick={()=>setSection("home")} aria-label="Inicio">⌂</button><button className={section==="search"?"active":""} onClick={()=>setSection("search")} aria-label="Buscar">⌕</button><button onClick={()=>setSection("create")} aria-label="Crear">+</button><button className={section==="likes"?"active":""} onClick={()=>setSection("likes")} aria-label="Me gusta">♡</button><button className="mesaPhoneProfileButton" onClick={()=>setSection("profile")} aria-label="Mi perfil"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=faces" alt="Perfil"/></button></nav>
+  {story&&<div className="mesaPhoneStoryOverlay"><button onClick={()=>setStory(null)} aria-label="Cerrar historia">×</button><strong>{story}</strong><p>Historias de MESA Club</p></div>}
  </div>;
 }
 function LandingDemoBilling(){
