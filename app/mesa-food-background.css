@@ -6,13 +6,13 @@ body { background-color:#f7f1eb; }
 body::after { content:none !important; }
 /* A small, quiet repeating pattern on the outer page canvas. */
 body {
- background-image:linear-gradient(#f7f1ebdf,#f7f1ebdf),var(--mesa-food-pattern);
+ background-image:linear-gradient(#f7f1ebbb,#f7f1ebbb),var(--mesa-food-pattern);
  background-repeat:repeat;
  background-size:auto,220px 165px;
 }
 /* Keep the artwork behind all real page content, including opaque page canvases. */
 body > main, body > div > main, .mesaSocialPage, .directory, .directoryPage {
- background-image:linear-gradient(#f7f1ebe8,#f7f1ebe8),var(--mesa-food-pattern);
+ background-image:linear-gradient(#f7f1ebbd,#f7f1ebbd),var(--mesa-food-pattern);
  background-repeat:repeat;
  background-size:auto,220px 165px;
 }
