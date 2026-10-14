@@ -175,3 +175,44 @@ footer:not(.darkFooter) {
 .mesaClubRealAppFrame{display:block;width:100%;height:100%;min-height:100%;border:0;background:#faf3eb;border-radius:inherit;}
 .mesaClubPhone:has(.mesaClubRealAppFrame) .mesaClubPhoneIsland{pointer-events:none;z-index:5;}
 .mesaClubPhoneWrap:has(.mesaClubRealAppFrame) .mesaClubPhoneCaption{display:none;}
+
+/* MESA Club landing: native portrait preview. Do not iframe the desktop app. */
+.mesaClubPhone{width:min(100%,345px);height:655px;box-sizing:border-box;padding:7px;overflow:hidden;display:block;}
+.mesaClubActualPreview{position:relative;height:100%;width:100%;overflow:hidden;border-radius:34px;background:#f8f0e7;color:#15110e;display:flex;flex-direction:column;font-family:inherit;}
+.mesaClubActualTop{display:flex;justify-content:space-between;align-items:center;padding:29px 15px 12px;background:#fffaf5;border-bottom:1px solid #eadbc9;font-size:14px;flex:none;}
+.mesaClubActualTop b span{color:#9b5705;}
+.mesaClubActualHeading{padding:15px 15px 10px;flex:none;}
+.mesaClubActualHeading small{font-size:8px;letter-spacing:.15em;font-weight:900;color:#a55a05;}
+.mesaClubActualHeading h3{font-size:25px;letter-spacing:-.05em;line-height:1.1;margin:7px 0 4px;font-weight:900;}
+.mesaClubActualHeading p{font-size:10px;line-height:1.4;color:#685748;margin:0;}
+.mesaClubActualNav{display:flex;gap:5px;padding:5px 12px 12px;flex:none;}
+.mesaClubActualNav button{flex:1;border:0;border-radius:8px;background:#eee1d2;padding:8px 4px;font-size:10px;font-weight:800;cursor:pointer;color:#39281b;}
+.mesaClubActualNav button.active{background:#16110e;color:white;}
+.mesaClubActualStories{margin:0 11px 9px;background:#fff;border-radius:13px;padding:11px;flex:none;}
+.mesaClubActualStories>b{font-size:12px;}
+.mesaClubActualStories>small{float:right;font-size:8px;color:#998675;}
+.mesaClubActualStories>div{display:flex;gap:13px;margin-top:11px;}
+.mesaClubActualStories button{border:0;background:none;display:flex;align-items:center;flex-direction:column;gap:4px;font-size:9px;font-weight:800;cursor:pointer;}
+.mesaClubActualStories button span{width:40px;height:40px;display:grid;place-items:center;border:2px solid #e59a20;border-radius:50%;background:#fff7e9;font-size:19px;}
+.mesaClubActualSearch{margin:0 11px 9px;padding:11px;background:#fff;border:1px solid #e9ddce;border-radius:9px;color:#77695c;font-size:9px;flex:none;}
+.mesaClubActualPost{margin:0 11px;background:white;border-radius:13px;overflow:hidden;flex:1;min-height:0;}
+.mesaClubActualPost>p,.mesaClubActualPost>b{margin:15px;display:block;font-size:12px;}
+.mesaClubActualAuthor{display:flex;align-items:center;gap:7px;padding:10px;}
+.mesaClubActualAuthor>span{font-size:19px;}
+.mesaClubActualAuthor div{flex:1;min-width:0;}
+.mesaClubActualAuthor div b{display:block;font-size:10px;}
+.mesaClubActualAuthor div small{font-size:8px;color:#8d7b68;}
+.mesaClubActualAuthor strong{font-size:7px;letter-spacing:.05em;background:#f4e7d7;padding:5px;border-radius:4px;}
+.mesaClubActualMedia{height:185px;background:linear-gradient(125deg,#4b220b,#a75b0c 48%,#eaa01e);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;}
+.mesaClubActualMedia small{font-size:9px;letter-spacing:.14em;font-weight:900;}
+.mesaClubActualMedia b{font-size:23px;line-height:1.1;margin:13px 0;letter-spacing:-.05em;}
+.mesaClubActualMedia p{font-size:11px;color:#fff;margin:0;}
+.mesaClubActualActions{padding:13px;font-size:10px;font-weight:800;display:flex;justify-content:space-between;}
+.mesaClubActualBottom{display:flex;justify-content:space-around;background:#fffaf5;border-top:1px solid #e8d9c8;padding:10px;flex:none;}
+.mesaClubActualBottom button{border:0;background:none;font-size:22px;cursor:pointer;}
+.mesaClubActualStory{position:absolute;inset:0;background:linear-gradient(155deg,#271407,#a55b12);color:white;z-index:6;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;text-align:center;padding:30px;}
+.mesaClubActualStory button{position:absolute;right:15px;top:30px;background:#ffffff33;color:white;border:0;border-radius:50%;width:35px;height:35px;cursor:pointer;}
+.mesaClubActualStory small{font-size:10px;letter-spacing:.15em;}
+.mesaClubActualStory strong{font-size:28px;line-height:1.15;}
+.mesaClubActualStory p{font-size:12px;color:#fff;}
+@media(max-width:600px){.mesaClubPhone{height:630px;}}
