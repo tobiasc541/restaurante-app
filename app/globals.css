@@ -1456,3 +1456,17 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
 @keyframes mesaDoodleStar{50%{transform:translateY(-8px) rotate(12deg)}}
 @media(max-width:700px){.mesaClubDoodle{max-width:310px}.mesaClubEdition{font-size:9px;letter-spacing:.13em}.mesaClubDoodleStage{min-height:292px}.mesaSocialAuthIntro{padding-bottom:30px}}
 @media(prefers-reduced-motion:reduce){.mesaClubDoodleTrack,.mesaClubDoodleGrain,.mesaClubDoodleStar{animation:none}}
+
+/* MESA CRO: illustrative case studies, isolated from existing interactive components */
+.mesaCaseStudies{max-width:1240px;margin:76px auto;padding:72px 34px;border-radius:32px;background:#0c0c0c;color:#fff;box-sizing:border-box}
+.mesaCasesIntro{max-width:760px;margin:0 auto 34px;text-align:center}
+.mesaCasesIntro h2{font-size:clamp(30px,4vw,52px);line-height:1.06;letter-spacing:-.045em;margin:16px 0}
+.mesaCasesIntro p{color:#c6c3bf;font-size:15px;line-height:1.65}
+.mesaCasesGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.mesaCaseCard{background:#191817;border:1px solid #39332d;border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:22px;min-height:280px}
+.mesaCaseMetric{color:#f4b14c;font-size:clamp(20px,2.3vw,29px);font-weight:850;letter-spacing:-.035em}
+.mesaCaseCard>p{font-size:15px;line-height:1.7;color:#f1eae2;flex:1;margin:0}
+.mesaCasePerson{display:flex;gap:12px;align-items:center;border-top:1px solid #37312b;padding-top:18px}
+.mesaCaseAvatar{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#f2b05e,#965000);color:#211207;font-weight:900;flex:none}
+.mesaCasePerson strong,.mesaCasePerson small{display:block}.mesaCasePerson small{font-size:12px;color:#bdb5aa;margin-top:4px}
+@media(max-width:800px){.mesaCaseStudies{margin:36px 14px;padding:42px 20px;border-radius:22px}.mesaCasesGrid{grid-template-columns:1fr}.mesaCaseCard{min-height:0}.mesaCasesIntro{text-align:left}}
