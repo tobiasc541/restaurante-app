@@ -1493,10 +1493,9 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
   max-width: 1280px;
   margin: 112px auto;
   padding: 100px clamp(28px, 5vw, 76px);
-  background: #f8f1e9;
-  background-image: none;
+  background: linear-gradient(180deg, rgba(248,241,233,0) 0%, #f8f1e9 16%, #f8f1e9 84%, rgba(248,241,233,0) 100%);
   color: #18181b;
-  border: 1px solid #eadbca;
+  border: 0;
   border-radius: 30px;
 }
 .mesaClubLanding .mesaClubLandingCopy,
@@ -1584,4 +1583,27 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
   .mesaImpulsaSection { padding-top: 72px; padding-bottom: 72px; }
   .mesaCaseStudies.section { padding: 64px 20px; }
   .mesaCROFinalCta { margin-top: 72px; padding-top: 80px; padding-bottom: 80px; }
+}
+
+/* Gentle cinematic transitions without a dark panel or changes to app mockup. */
+.mesaClubLanding.section {
+  box-shadow: none;
+  overflow: visible;
+}
+.mesaClubLanding.section::before,
+.mesaClubLanding.section::after {
+  content: none;
+}
+.mesaCaseStudies.section {
+  background: linear-gradient(180deg, rgba(244,238,230,0) 0%, #f4eee6 13%, #f4eee6 87%, rgba(244,238,230,0) 100%);
+  border: 0;
+  box-shadow: none;
+}
+@media (min-width: 769px) {
+  .mesaClubLanding.section { padding-top: 128px; padding-bottom: 128px; }
+  .mesaCaseStudies.section { padding-top: 112px; padding-bottom: 112px; }
+}
+@media (max-width: 768px) {
+  .mesaClubLanding.section { padding-top: 104px; padding-bottom: 104px; }
+  .mesaCaseStudies.section { padding-top: 92px; padding-bottom: 92px; }
 }
