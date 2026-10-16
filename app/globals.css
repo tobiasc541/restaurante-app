@@ -1607,3 +1607,49 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
   .mesaClubLanding.section { padding-top: 104px; padding-bottom: 104px; }
   .mesaCaseStudies.section { padding-top: 92px; padding-bottom: 92px; }
 }
+
+/* Floating SaaS landing sections: real CSS utilities (project does not install Tailwind).
+   Layout-only: preserve React state, event handlers, audio and phone internals. */
+.mesaFloatingSection.section {
+  box-sizing: border-box;
+  width: min(calc(100% - 64px), 1320px);
+  max-width: 1320px;
+  margin: 112px auto;
+  padding: clamp(64px, 7vw, 112px) clamp(24px, 5vw, 76px);
+  background: #fffdfa;
+  border: 1px solid rgba(161,161,170,.28);
+  border-radius: 32px;
+  box-shadow: 0 28px 72px rgba(24,24,27,.085), 0 8px 24px rgba(24,24,27,.035);
+}
+.mesaClubLanding.mesaFloatingSection.section {
+  background: #fffaf4;
+  color: #18181b;
+}
+.mesaCaseStudies.mesaFloatingSection.section {
+  background: #f9f2ea;
+  color: #18181b;
+}
+.mesaCaseStudies .mesaCaseCard.mesaLiftCard {
+  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+  will-change: transform;
+  box-shadow: 0 12px 32px rgba(24,24,27,.055);
+}
+@media (hover: hover) and (pointer: fine) {
+  .mesaCaseStudies .mesaCaseCard.mesaLiftCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 26px 55px rgba(24,24,27,.13);
+    border-color: #d4bfa6;
+  }
+}
+@media (max-width: 768px) {
+  .mesaFloatingSection.section {
+    width: calc(100% - 28px);
+    margin: 76px auto;
+    padding: 72px 20px;
+    border-radius: 26px;
+    box-shadow: 0 14px 36px rgba(24,24,27,.075);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mesaCaseStudies .mesaCaseCard.mesaLiftCard { transition: none; will-change: auto; }
+}
