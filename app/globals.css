@@ -1690,3 +1690,23 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
     box-shadow: 0 14px 36px rgba(24,24,27,.075);
   }
 }
+
+/* MESA Impulsa: the black feature panel floats directly on the cream page.
+   Remove only the outer modular white card; preserve its dark inner panel. */
+.mesaImpulsaSection.mesaFloatingSection {
+  background: transparent;
+  background-image: none;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .mesaImpulsaSection.mesaFloatingSection {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
