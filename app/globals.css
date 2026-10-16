@@ -1749,3 +1749,156 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
  .mesaExpressSteps { grid-template-columns:1fr; }
  .mesaExpressOnboarding { padding:24px 18px; }
 }
+
+/* Transformation v2: isolated layout, readable hierarchy, progressive motion. */
+.mesaTransformation.mesaFloatingSection.section {
+  display:block;
+  min-width:0;
+  overflow:visible;
+  padding:clamp(64px,7vw,104px) clamp(22px,5vw,72px);
+  background:linear-gradient(155deg,#fffefa 0%,#fffaf4 55%,#f6f9f4 100%);
+  isolation:isolate;
+}
+.mesaTransformation .mesaTransformationHeader {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  max-width:780px;
+  min-width:0;
+  margin:0 auto 56px;
+  padding:0;
+  text-align:center;
+  position:relative;
+  z-index:1;
+}
+.mesaTransformation .mesaTransformationHeader .tag {
+  display:inline-block;
+  align-self:center;
+  width:auto;
+  max-width:100%;
+  margin:0 0 20px;
+  color:#137342;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+.mesaTransformation .mesaTransformationHeader h2#mesa-transformation-title {
+  display:block;
+  position:static;
+  float:none;
+  clear:both;
+  width:100%;
+  max-width:780px;
+  min-width:0;
+  height:auto;
+  margin:0 auto 22px;
+  padding:0;
+  font-size:clamp(30px,3.5vw,48px);
+  line-height:1.16;
+  font-weight:850;
+  letter-spacing:-.042em;
+  text-align:center;
+  overflow-wrap:break-word;
+  word-break:normal;
+  color:#18181b;
+  background:linear-gradient(105deg,#18181b 10%,#34363a 52%,#63666a 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.mesaTransformation .mesaTransformationHeader > p {
+  display:block;
+  width:100%;
+  max-width:620px;
+  margin:0 auto;
+  font-size:clamp(15px,1.5vw,17px);
+  line-height:1.7;
+  color:#57534e;
+  text-align:center;
+}
+.mesaTransformation .mesaTransformationGrid {
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  align-items:stretch;
+  gap:clamp(18px,2.5vw,32px);
+  width:100%;
+  margin:0;
+  clear:both;
+}
+.mesaTransformation .mesaTransformationGrid > article,
+.mesaTransformation .mesaExpressSteps > article {
+  min-width:0;
+  border-radius:28px;
+  border:1px solid rgba(161,161,170,.25);
+  background:#fff;
+  box-shadow:0 20px 48px rgba(24,24,27,.07),0 5px 18px rgba(24,24,27,.025);
+  transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s ease,border-color .5s ease;
+}
+.mesaTransformation .mesaTransformationGrid > article { overflow:hidden; }
+.mesaTransformation .mesaTransformationGrid > .mesaTransformationAfter {
+  background:#fbfefa;
+  border-color:#cce4d3;
+}
+.mesaTransformation .mesaTransformationPhoto {
+  min-height:clamp(185px,20vw,270px);
+}
+.mesaTransformation .mesaTransformationContent h3 {
+  font-size:clamp(19px,1.9vw,25px);
+  line-height:1.32;
+  overflow-wrap:break-word;
+}
+.mesaTransformation .mesaExpressOnboarding {
+  position:relative;
+  clear:both;
+  margin-top:clamp(30px,4vw,52px);
+  padding:clamp(24px,4vw,48px);
+  border-radius:28px;
+  background:linear-gradient(125deg,#eff8f1,#fff9ee 70%,#f7f7f7);
+}
+.mesaTransformation .mesaExpressSteps > article { border-radius:22px; }
+@media(hover:hover) and (pointer:fine) {
+  .mesaTransformation .mesaTransformationGrid > article:hover,
+  .mesaTransformation .mesaExpressSteps > article:hover {
+    transform:translateY(-8px);
+    border-color:rgba(16,185,129,.38);
+    box-shadow:0 34px 68px rgba(24,24,27,.13),0 12px 26px rgba(24,24,27,.04);
+  }
+}
+@keyframes mesaTransformReveal {
+  from { opacity:0; transform:translateY(20px); filter:blur(3px); }
+  to { opacity:1; transform:translateY(0); filter:blur(0); }
+}
+@supports (animation-timeline:view()) {
+  .mesaTransformation .mesaTransformationHeader,
+  .mesaTransformation .mesaTransformationGrid,
+  .mesaTransformation .mesaExpressOnboarding {
+    animation:mesaTransformReveal linear both;
+    animation-timeline:view();
+    animation-range:entry 0% entry 75%;
+  }
+}
+@media(max-width:800px) {
+  .mesaTransformation .mesaTransformationHeader { max-width:100%; margin-bottom:36px; }
+  .mesaTransformation .mesaTransformationHeader h2#mesa-transformation-title {
+    font-size:clamp(29px,7.1vw,40px);
+    line-height:1.18;
+    letter-spacing:-.035em;
+  }
+  .mesaTransformation .mesaTransformationGrid { grid-template-columns:minmax(0,1fr); gap:20px; }
+  .mesaTransformation .mesaExpressSteps { grid-template-columns:minmax(0,1fr); }
+}
+@media(prefers-reduced-motion:reduce) {
+  .mesaTransformation .mesaTransformationHeader,
+  .mesaTransformation .mesaTransformationGrid,
+  .mesaTransformation .mesaExpressOnboarding {
+    animation:none;
+    opacity:1;
+    transform:none;
+    filter:none;
+  }
+  .mesaTransformation .mesaTransformationGrid > article,
+  .mesaTransformation .mesaExpressSteps > article { transition:none; }
+}
