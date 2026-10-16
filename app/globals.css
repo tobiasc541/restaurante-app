@@ -1484,3 +1484,71 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
 /* Portraits inside existing case-study avatar circles */
 .mesaCasePerson .mesaCaseAvatar{display:inline-flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;border-radius:50%;width:42px;height:42px;background:#f2e8dd}
 .mesaCasePerson .mesaCaseAvatar img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+
+/* Landing visual rhythm v3 — presentation-only; interactive component styles stay intact. */
+@media (min-width: 769px) {
+  main:has(.mesaClubLanding) > .section,
+  main:has(.mesaClubLanding) > .mesaNotificationSection,
+  main:has(.mesaClubLanding) > .mesaImpulsaSection {
+    padding-top: clamp(100px, 8vw, 144px);
+    padding-bottom: clamp(100px, 8vw, 144px);
+  }
+}
+main:has(.mesaClubLanding) .mesaClubLanding {
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: clamp(96px, 10vw, 160px) max(24px, calc((100vw - 1260px)/2));
+  background: radial-gradient(ellipse at 76% 40%, #26362c 0%, #151b18 36%, #09090b 80%);
+  color: #f8faf9;
+  border: 0;
+  border-radius: 0;
+}
+main:has(.mesaClubLanding) .mesaClubLanding .mesaClubLandingCopy,
+main:has(.mesaClubLanding) .mesaClubLanding .mesaClubLandingCopy h2,
+main:has(.mesaClubLanding) .mesaClubLanding .mesaClubLandingCopy p,
+main:has(.mesaClubLanding) .mesaClubLanding .mesaClubLandingCopy em {
+  color: #f8faf9;
+}
+main:has(.mesaClubLanding) .mesaClubLanding .mesaClubLandingCopy p { color: #d1d5db; line-height: 1.8; }
+main:has(.mesaClubLanding) .mesaClubLanding .mesaClubLandingPills span {
+  color: #e5e7eb;
+  background: rgba(255,255,255,.09);
+  border-color: rgba(255,255,255,.18);
+}
+main:has(.mesaClubLanding) .mesaClubLanding .mesaClubLandingCopy .tag { color: #a4e6ba; }
+main:has(.mesaClubLanding) .mesaClubLanding .mesaClubPhoneWrap { position: relative; z-index: 1; }
+main:has(.mesaClubLanding) .mesaCaseStudies {
+  margin-top: clamp(88px, 8vw, 136px);
+  margin-bottom: clamp(88px, 8vw, 136px);
+}
+main:has(.mesaClubLanding) .mesaCROComparison,
+main:has(.mesaClubLanding) .mesaCROFaq,
+main:has(.mesaClubLanding) .mesaPricingEpic {
+  margin-top: clamp(70px, 7vw, 112px);
+  margin-bottom: clamp(70px, 7vw, 112px);
+}
+main:has(.mesaClubLanding) .mesaCROFinalCta {
+  padding-top: clamp(96px, 9vw, 144px);
+  padding-bottom: clamp(96px, 9vw, 144px);
+}
+@media (max-width: 768px) {
+  main:has(.mesaClubLanding) > .section,
+  main:has(.mesaClubLanding) > .mesaNotificationSection,
+  main:has(.mesaClubLanding) > .mesaImpulsaSection {
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+  main:has(.mesaClubLanding) .mesaClubLanding {
+    padding: 88px 20px;
+    margin: 0;
+    border-radius: 0;
+  }
+  main:has(.mesaClubLanding) .mesaCaseStudies { margin-top: 68px; margin-bottom: 68px; }
+  main:has(.mesaClubLanding) .mesaCROComparison,
+  main:has(.mesaClubLanding) .mesaCROFaq,
+  main:has(.mesaClubLanding) .mesaPricingEpic { margin-top: 64px; margin-bottom: 64px; }
+}
