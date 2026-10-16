@@ -1966,3 +1966,29 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
 @media(prefers-reduced-motion:reduce) {
   .mesaTransformation .mesaTransformationHeader h2#mesa-transformation-title { animation:none; }
 }
+
+/* Transformation final polish: no opaque backdrop behind the heading. */
+.mesaTransformation .mesaTransformationHeader,
+.mesaTransformation .mesaTransformationHeader::before,
+.mesaTransformation .mesaTransformationHeader::after,
+.mesaTransformation .mesaTransformationHeader h2#mesa-transformation-title,
+.mesaTransformation .mesaTransformationHeader > p {
+  background-color:transparent;
+  box-shadow:none;
+  border:0;
+}
+.mesaTransformation .mesaTransformationHeader {
+  background:none;
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+}
+.mesaTransformation .mesaTransformationHeader h2#mesa-transformation-title {
+  background-image:linear-gradient(105deg,#18181b 10%,#34363a 52%,#63666a 100%);
+  background-color:transparent;
+  -webkit-background-clip:text;
+  background-clip:text;
+}
+.mesaTransformation .mesaTransformationPhotoBefore {
+  background-image:url("/Caos%20en%20la%20cocina%20durante%20el%20servicio.png");
+  background-position:center center;
+}
