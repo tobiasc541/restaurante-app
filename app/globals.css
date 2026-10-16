@@ -1992,3 +1992,11 @@ footer .mesaBrandLogo{height:53px;max-width:250px}
   background-image:url("/Caos%20en%20la%20cocina%20durante%20el%20servicio.png");
   background-position:center center;
 }
+
+/* Seven-day trial state, read from Supabase rather than client-side clocks. */
+.mesaTrialBanner {display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 22px;margin:0 0 20px;border:1px solid #bbdfca;border-radius:18px;background:linear-gradient(105deg,#eef9f0,#fffdf7);color:#154c30;box-shadow:0 8px 24px rgba(24,24,27,.035);}
+.mesaTrialBanner strong {display:block;font-size:15px;font-weight:800;}
+.mesaTrialBanner p {margin:5px 0 0;font-size:13px;line-height:1.55;color:#476451;}
+.mesaTrialBanner.mesaTrialExpired {background:#fff3ee;border-color:#f1c6b4;color:#8d3522;}
+.mesaTrialBanner.mesaTrialExpired p {color:#83574b;}
+@media(max-width:768px){.mesaTrialBanner{padding:16px;flex-direction:column;align-items:flex-start;}}
